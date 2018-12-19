@@ -8,9 +8,10 @@ namespace KutuphaneOtomasyonu.Lib
 {
     public class Kitap
     {
-        public int Ad { get; set; }
+        public string KitapAd { get; set; }
         public Yazar Yazar { get; set; }
         public KitapTurler Tur { get; set; }
+        public string Yayin { get; set; }
 
 
 

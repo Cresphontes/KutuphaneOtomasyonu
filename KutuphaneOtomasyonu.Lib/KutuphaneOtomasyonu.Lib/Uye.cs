@@ -8,6 +8,9 @@ namespace KutuphaneOtomasyonu.Lib
 {
     public class Uye:Insan
     {
+        public string TCKN { get; set; }
+        public string Telefon { get; set; }
+        public string Email { get; set; }
 
     }
 }

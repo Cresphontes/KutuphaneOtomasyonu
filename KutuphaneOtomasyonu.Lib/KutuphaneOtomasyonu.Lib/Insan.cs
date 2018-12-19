@@ -8,9 +8,9 @@ namespace KutuphaneOtomasyonu.Lib
 {
     public class Insan
     {
-        public int Ad { get; set; }
-        public int Soyad { get; set; }
-        public int Yas { get; set; }
+        public string Ad { get; set; }
+        public string Soyad { get; set; }
+        public DateTime DogumTarihi { get; set; }
 
     }
 }
