@@ -21,6 +21,7 @@ namespace KutuphaneOtomasyonu
         FormKitaplar frmKitaplar;
         FormUyeler frmUyeler;
         FormKiralama frmKiralama;
+
         public Context context { get; set; }
 
         private void BtnKitapKayit_Click(object sender, EventArgs e)

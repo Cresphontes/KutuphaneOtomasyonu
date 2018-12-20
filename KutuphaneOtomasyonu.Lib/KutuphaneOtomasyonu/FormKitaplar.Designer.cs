@@ -35,13 +35,13 @@
             this.lblYayin = new System.Windows.Forms.Label();
             this.cmbYazar = new System.Windows.Forms.ComboBox();
             this.gbTurler = new System.Windows.Forms.GroupBox();
-            this.radioBtnBilim = new System.Windows.Forms.RadioButton();
-            this.radioBtnEdebiyat = new System.Windows.Forms.RadioButton();
-            this.radioBtnTarih = new System.Windows.Forms.RadioButton();
-            this.radioBtnMizah = new System.Windows.Forms.RadioButton();
-            this.radioBtnPsikoloji = new System.Windows.Forms.RadioButton();
-            this.radioBtnFelsefe = new System.Windows.Forms.RadioButton();
-            this.radioBtnSanat = new System.Windows.Forms.RadioButton();
+            this.radioBtn7 = new System.Windows.Forms.RadioButton();
+            this.radioBtn6 = new System.Windows.Forms.RadioButton();
+            this.radioBtn5 = new System.Windows.Forms.RadioButton();
+            this.radioBtn4 = new System.Windows.Forms.RadioButton();
+            this.radioBtn3 = new System.Windows.Forms.RadioButton();
+            this.radioBtn2 = new System.Windows.Forms.RadioButton();
+            this.radioBtn1 = new System.Windows.Forms.RadioButton();
             this.lstKitaplar = new System.Windows.Forms.ListBox();
             this.btnKitapKaydet = new System.Windows.Forms.Button();
             this.btnKitapGuncelle = new System.Windows.Forms.Button();
@@ -99,16 +99,17 @@
             this.cmbYazar.Name = "cmbYazar";
             this.cmbYazar.Size = new System.Drawing.Size(149, 21);
             this.cmbYazar.TabIndex = 8;
+            this.cmbYazar.SelectedIndexChanged += new System.EventHandler(this.cmbYazar_SelectedIndexChanged);
             // 
             // gbTurler
             // 
-            this.gbTurler.Controls.Add(this.radioBtnSanat);
-            this.gbTurler.Controls.Add(this.radioBtnFelsefe);
-            this.gbTurler.Controls.Add(this.radioBtnPsikoloji);
-            this.gbTurler.Controls.Add(this.radioBtnMizah);
-            this.gbTurler.Controls.Add(this.radioBtnTarih);
-            this.gbTurler.Controls.Add(this.radioBtnEdebiyat);
-            this.gbTurler.Controls.Add(this.radioBtnBilim);
+            this.gbTurler.Controls.Add(this.radioBtn7);
+            this.gbTurler.Controls.Add(this.radioBtn6);
+            this.gbTurler.Controls.Add(this.radioBtn5);
+            this.gbTurler.Controls.Add(this.radioBtn4);
+            this.gbTurler.Controls.Add(this.radioBtn3);
+            this.gbTurler.Controls.Add(this.radioBtn2);
+            this.gbTurler.Controls.Add(this.radioBtn1);
             this.gbTurler.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbTurler.Location = new System.Drawing.Point(12, 73);
             this.gbTurler.Name = "gbTurler";
@@ -117,89 +118,89 @@
             this.gbTurler.TabStop = false;
             this.gbTurler.Text = "Kitap Türü";
             // 
-            // radioBtnBilim
+            // radioBtn7
             // 
-            this.radioBtnBilim.AutoSize = true;
-            this.radioBtnBilim.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnBilim.Location = new System.Drawing.Point(32, 41);
-            this.radioBtnBilim.Name = "radioBtnBilim";
-            this.radioBtnBilim.Size = new System.Drawing.Size(59, 24);
-            this.radioBtnBilim.TabIndex = 0;
-            this.radioBtnBilim.TabStop = true;
-            this.radioBtnBilim.Text = "Bilim";
-            this.radioBtnBilim.UseVisualStyleBackColor = true;
+            this.radioBtn7.AutoSize = true;
+            this.radioBtn7.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtn7.Location = new System.Drawing.Point(674, 41);
+            this.radioBtn7.Name = "radioBtn7";
+            this.radioBtn7.Size = new System.Drawing.Size(64, 24);
+            this.radioBtn7.TabIndex = 6;
+            this.radioBtn7.TabStop = true;
+            this.radioBtn7.Text = "Sanat";
+            this.radioBtn7.UseVisualStyleBackColor = true;
             // 
-            // radioBtnEdebiyat
+            // radioBtn6
             // 
-            this.radioBtnEdebiyat.AutoSize = true;
-            this.radioBtnEdebiyat.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnEdebiyat.Location = new System.Drawing.Point(139, 41);
-            this.radioBtnEdebiyat.Name = "radioBtnEdebiyat";
-            this.radioBtnEdebiyat.Size = new System.Drawing.Size(84, 24);
-            this.radioBtnEdebiyat.TabIndex = 1;
-            this.radioBtnEdebiyat.TabStop = true;
-            this.radioBtnEdebiyat.Text = "Edebiyat";
-            this.radioBtnEdebiyat.UseVisualStyleBackColor = true;
+            this.radioBtn6.AutoSize = true;
+            this.radioBtn6.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtn6.Location = new System.Drawing.Point(567, 41);
+            this.radioBtn6.Name = "radioBtn6";
+            this.radioBtn6.Size = new System.Drawing.Size(74, 24);
+            this.radioBtn6.TabIndex = 5;
+            this.radioBtn6.TabStop = true;
+            this.radioBtn6.Text = "Felsefe";
+            this.radioBtn6.UseVisualStyleBackColor = true;
             // 
-            // radioBtnTarih
+            // radioBtn5
             // 
-            this.radioBtnTarih.AutoSize = true;
-            this.radioBtnTarih.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnTarih.Location = new System.Drawing.Point(246, 41);
-            this.radioBtnTarih.Name = "radioBtnTarih";
-            this.radioBtnTarih.Size = new System.Drawing.Size(60, 24);
-            this.radioBtnTarih.TabIndex = 2;
-            this.radioBtnTarih.TabStop = true;
-            this.radioBtnTarih.Text = "Tarih";
-            this.radioBtnTarih.UseVisualStyleBackColor = true;
+            this.radioBtn5.AutoSize = true;
+            this.radioBtn5.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtn5.Location = new System.Drawing.Point(460, 41);
+            this.radioBtn5.Name = "radioBtn5";
+            this.radioBtn5.Size = new System.Drawing.Size(82, 24);
+            this.radioBtn5.TabIndex = 4;
+            this.radioBtn5.TabStop = true;
+            this.radioBtn5.Text = "Psikoloji";
+            this.radioBtn5.UseVisualStyleBackColor = true;
             // 
-            // radioBtnMizah
+            // radioBtn4
             // 
-            this.radioBtnMizah.AutoSize = true;
-            this.radioBtnMizah.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnMizah.Location = new System.Drawing.Point(353, 41);
-            this.radioBtnMizah.Name = "radioBtnMizah";
-            this.radioBtnMizah.Size = new System.Drawing.Size(65, 24);
-            this.radioBtnMizah.TabIndex = 3;
-            this.radioBtnMizah.TabStop = true;
-            this.radioBtnMizah.Text = "Mizah";
-            this.radioBtnMizah.UseVisualStyleBackColor = true;
+            this.radioBtn4.AutoSize = true;
+            this.radioBtn4.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtn4.Location = new System.Drawing.Point(353, 41);
+            this.radioBtn4.Name = "radioBtn4";
+            this.radioBtn4.Size = new System.Drawing.Size(65, 24);
+            this.radioBtn4.TabIndex = 3;
+            this.radioBtn4.TabStop = true;
+            this.radioBtn4.Text = "Mizah";
+            this.radioBtn4.UseVisualStyleBackColor = true;
             // 
-            // radioBtnPsikoloji
+            // radioBtn3
             // 
-            this.radioBtnPsikoloji.AutoSize = true;
-            this.radioBtnPsikoloji.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnPsikoloji.Location = new System.Drawing.Point(460, 41);
-            this.radioBtnPsikoloji.Name = "radioBtnPsikoloji";
-            this.radioBtnPsikoloji.Size = new System.Drawing.Size(82, 24);
-            this.radioBtnPsikoloji.TabIndex = 4;
-            this.radioBtnPsikoloji.TabStop = true;
-            this.radioBtnPsikoloji.Text = "Psikoloji";
-            this.radioBtnPsikoloji.UseVisualStyleBackColor = true;
+            this.radioBtn3.AutoSize = true;
+            this.radioBtn3.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtn3.Location = new System.Drawing.Point(246, 41);
+            this.radioBtn3.Name = "radioBtn3";
+            this.radioBtn3.Size = new System.Drawing.Size(60, 24);
+            this.radioBtn3.TabIndex = 2;
+            this.radioBtn3.TabStop = true;
+            this.radioBtn3.Text = "Tarih";
+            this.radioBtn3.UseVisualStyleBackColor = true;
             // 
-            // radioBtnFelsefe
+            // radioBtn2
             // 
-            this.radioBtnFelsefe.AutoSize = true;
-            this.radioBtnFelsefe.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnFelsefe.Location = new System.Drawing.Point(567, 41);
-            this.radioBtnFelsefe.Name = "radioBtnFelsefe";
-            this.radioBtnFelsefe.Size = new System.Drawing.Size(74, 24);
-            this.radioBtnFelsefe.TabIndex = 5;
-            this.radioBtnFelsefe.TabStop = true;
-            this.radioBtnFelsefe.Text = "Felsefe";
-            this.radioBtnFelsefe.UseVisualStyleBackColor = true;
+            this.radioBtn2.AutoSize = true;
+            this.radioBtn2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtn2.Location = new System.Drawing.Point(139, 41);
+            this.radioBtn2.Name = "radioBtn2";
+            this.radioBtn2.Size = new System.Drawing.Size(84, 24);
+            this.radioBtn2.TabIndex = 1;
+            this.radioBtn2.TabStop = true;
+            this.radioBtn2.Text = "Edebiyat";
+            this.radioBtn2.UseVisualStyleBackColor = true;
             // 
-            // radioBtnSanat
+            // radioBtn1
             // 
-            this.radioBtnSanat.AutoSize = true;
-            this.radioBtnSanat.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnSanat.Location = new System.Drawing.Point(674, 41);
-            this.radioBtnSanat.Name = "radioBtnSanat";
-            this.radioBtnSanat.Size = new System.Drawing.Size(64, 24);
-            this.radioBtnSanat.TabIndex = 6;
-            this.radioBtnSanat.TabStop = true;
-            this.radioBtnSanat.Text = "Sanat";
-            this.radioBtnSanat.UseVisualStyleBackColor = true;
+            this.radioBtn1.AutoSize = true;
+            this.radioBtn1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtn1.Location = new System.Drawing.Point(32, 41);
+            this.radioBtn1.Name = "radioBtn1";
+            this.radioBtn1.Size = new System.Drawing.Size(59, 24);
+            this.radioBtn1.TabIndex = 0;
+            this.radioBtn1.TabStop = true;
+            this.radioBtn1.Text = "Bilim";
+            this.radioBtn1.UseVisualStyleBackColor = true;
             // 
             // lstKitaplar
             // 
@@ -219,6 +220,7 @@
             this.btnKitapKaydet.TabIndex = 11;
             this.btnKitapKaydet.Text = "Kaydet";
             this.btnKitapKaydet.UseVisualStyleBackColor = true;
+            this.btnKitapKaydet.Click += new System.EventHandler(this.btnKitapKaydet_Click);
             // 
             // btnKitapGuncelle
             // 
@@ -248,6 +250,7 @@
             this.Controls.Add(this.txtKitapAdi);
             this.Name = "FormKitaplar";
             this.Text = "FormKitaplar";
+            this.Load += new System.EventHandler(this.FormKitaplar_Load);
             this.gbTurler.ResumeLayout(false);
             this.gbTurler.PerformLayout();
             this.ResumeLayout(false);
@@ -264,13 +267,13 @@
         private System.Windows.Forms.Label lblYayin;
         private System.Windows.Forms.ComboBox cmbYazar;
         private System.Windows.Forms.GroupBox gbTurler;
-        private System.Windows.Forms.RadioButton radioBtnSanat;
-        private System.Windows.Forms.RadioButton radioBtnFelsefe;
-        private System.Windows.Forms.RadioButton radioBtnPsikoloji;
-        private System.Windows.Forms.RadioButton radioBtnMizah;
-        private System.Windows.Forms.RadioButton radioBtnTarih;
-        private System.Windows.Forms.RadioButton radioBtnEdebiyat;
-        private System.Windows.Forms.RadioButton radioBtnBilim;
+        private System.Windows.Forms.RadioButton radioBtn7;
+        private System.Windows.Forms.RadioButton radioBtn6;
+        private System.Windows.Forms.RadioButton radioBtn5;
+        private System.Windows.Forms.RadioButton radioBtn4;
+        private System.Windows.Forms.RadioButton radioBtn3;
+        private System.Windows.Forms.RadioButton radioBtn2;
+        private System.Windows.Forms.RadioButton radioBtn1;
         private System.Windows.Forms.ListBox lstKitaplar;
         private System.Windows.Forms.Button btnKitapKaydet;
         private System.Windows.Forms.Button btnKitapGuncelle;

@@ -11,6 +11,7 @@ namespace KutuphaneOtomasyonu.Lib
         public string TCKN { get; set; }
         public string Telefon { get; set; }
         public string Email { get; set; }
+        public List<Kitap> UyeKitaplar { get; set; } = new List<Kitap>();
 
     }
 }
