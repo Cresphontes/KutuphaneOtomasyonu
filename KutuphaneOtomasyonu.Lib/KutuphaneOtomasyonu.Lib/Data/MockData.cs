@@ -15,24 +15,25 @@ namespace KutuphaneOtomasyonu.Lib.Data
         public MockData()
         {
             context = new Context();
-    
+
             for (int i = 0; i < 10; i++)
             {
-                context.Yazarlar.Add(new Yazar
+                context.Yazarlar.Add(new Yazar()
                 {
-                    Ad = 
-
+                    Ad = FakeData.NameData.GetFirstName(),
+                    Soyad = FakeData.NameData.GetSurname(),
+                    DogumTarihi = FakeData.DateTimeData.GetDatetime()
                 });
+
             }
 
-
-
         }
-
-        
-
-
-
-
+    }
 }
+
+
+
+
+
+
 
