@@ -46,7 +46,6 @@
     <Compile Include="Business\YazarBusiness.cs" />
     <Compile Include="Business\UyeBusiness.cs" />
     <Compile Include="Data\Context.cs" />
-    <Compile Include="Data\MockData.cs" />
     <Compile Include="IAtamaKitapYazar.cs" />
     <Compile Include="IAtamaKitapUye.cs" />
     <Compile Include="Insan.cs" />

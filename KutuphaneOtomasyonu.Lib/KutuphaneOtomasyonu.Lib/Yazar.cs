@@ -9,5 +9,6 @@ namespace KutuphaneOtomasyonu.Lib
     public class Yazar:Insan
     {
         public List<Kitap> YazarKitaplar { get; set; } = new List<Kitap>();
+        public List<KitapTurler> YazarTurler { get; set; } = new List<KitapTurler>();
     }
 }
