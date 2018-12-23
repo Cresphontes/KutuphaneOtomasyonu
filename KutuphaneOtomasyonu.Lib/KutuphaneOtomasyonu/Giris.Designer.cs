@@ -31,10 +31,13 @@
             this.kaydetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.açToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.BtnKitapKayit = new System.Windows.Forms.Button();
+            this.btnKitapKayit = new System.Windows.Forms.Button();
             this.btnUyeKayit = new System.Windows.Forms.Button();
             this.btnKiralama = new System.Windows.Forms.Button();
+            this.btnYazarKayit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kaydetToolStripMenuItem
@@ -56,60 +59,89 @@
             this.açToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // BtnKitapKayit
+            // btnKitapKayit
             // 
-            this.BtnKitapKayit.AutoEllipsis = true;
-            this.BtnKitapKayit.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnKitapKayit.Location = new System.Drawing.Point(145, 76);
-            this.BtnKitapKayit.Name = "BtnKitapKayit";
-            this.BtnKitapKayit.Size = new System.Drawing.Size(208, 121);
-            this.BtnKitapKayit.TabIndex = 3;
-            this.BtnKitapKayit.Text = "KİTAP KAYIT";
-            this.BtnKitapKayit.UseVisualStyleBackColor = true;
-            this.BtnKitapKayit.Click += new System.EventHandler(this.BtnKitapKayit_Click);
+            this.btnKitapKayit.AutoEllipsis = true;
+            this.btnKitapKayit.BackColor = System.Drawing.Color.Tomato;
+            this.btnKitapKayit.Font = new System.Drawing.Font("Times New Roman", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKitapKayit.Location = new System.Drawing.Point(31, 24);
+            this.btnKitapKayit.Name = "btnKitapKayit";
+            this.btnKitapKayit.Size = new System.Drawing.Size(432, 250);
+            this.btnKitapKayit.TabIndex = 3;
+            this.btnKitapKayit.Text = "KİTAP KAYIT";
+            this.btnKitapKayit.UseVisualStyleBackColor = false;
+            this.btnKitapKayit.Click += new System.EventHandler(this.btnKitapKayit_Click);
             // 
             // btnUyeKayit
             // 
             this.btnUyeKayit.AutoEllipsis = true;
-            this.btnUyeKayit.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUyeKayit.Location = new System.Drawing.Point(447, 76);
+            this.btnUyeKayit.BackColor = System.Drawing.Color.Tomato;
+            this.btnUyeKayit.Font = new System.Drawing.Font("Times New Roman", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUyeKayit.Location = new System.Drawing.Point(703, 24);
             this.btnUyeKayit.Name = "btnUyeKayit";
-            this.btnUyeKayit.Size = new System.Drawing.Size(208, 121);
+            this.btnUyeKayit.Size = new System.Drawing.Size(432, 250);
             this.btnUyeKayit.TabIndex = 4;
             this.btnUyeKayit.Text = "ÜYE KAYIT";
-            this.btnUyeKayit.UseVisualStyleBackColor = true;
+            this.btnUyeKayit.UseVisualStyleBackColor = false;
             this.btnUyeKayit.Click += new System.EventHandler(this.btnUyeKayit_Click);
             // 
             // btnKiralama
             // 
             this.btnKiralama.AutoEllipsis = true;
-            this.btnKiralama.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKiralama.Location = new System.Drawing.Point(292, 253);
+            this.btnKiralama.BackColor = System.Drawing.Color.Tomato;
+            this.btnKiralama.Font = new System.Drawing.Font("Times New Roman", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKiralama.Location = new System.Drawing.Point(703, 384);
             this.btnKiralama.Name = "btnKiralama";
-            this.btnKiralama.Size = new System.Drawing.Size(208, 121);
+            this.btnKiralama.Size = new System.Drawing.Size(432, 250);
             this.btnKiralama.TabIndex = 5;
             this.btnKiralama.Text = "KİRALAMA";
-            this.btnKiralama.UseVisualStyleBackColor = true;
+            this.btnKiralama.UseVisualStyleBackColor = false;
             this.btnKiralama.Click += new System.EventHandler(this.btnKiralama_Click);
+            // 
+            // btnYazarKayit
+            // 
+            this.btnYazarKayit.AutoEllipsis = true;
+            this.btnYazarKayit.BackColor = System.Drawing.Color.Tomato;
+            this.btnYazarKayit.Font = new System.Drawing.Font("Times New Roman", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYazarKayit.Location = new System.Drawing.Point(31, 384);
+            this.btnYazarKayit.Name = "btnYazarKayit";
+            this.btnYazarKayit.Size = new System.Drawing.Size(432, 250);
+            this.btnYazarKayit.TabIndex = 7;
+            this.btnYazarKayit.Text = "YAZAR KAYIT";
+            this.btnYazarKayit.UseVisualStyleBackColor = false;
+            this.btnYazarKayit.Click += new System.EventHandler(this.btnYazarKayit_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.btnKiralama);
+            this.panel1.Controls.Add(this.btnYazarKayit);
+            this.panel1.Controls.Add(this.btnKitapKayit);
+            this.panel1.Controls.Add(this.btnUyeKayit);
+            this.panel1.Location = new System.Drawing.Point(377, 195);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1166, 691);
+            this.panel1.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.btnKiralama);
-            this.Controls.Add(this.btnUyeKayit);
-            this.Controls.Add(this.BtnKitapKayit);
+            this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,9 +152,11 @@
         private System.Windows.Forms.ToolStripMenuItem kaydetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem açToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Button BtnKitapKayit;
+        private System.Windows.Forms.Button btnKitapKayit;
         private System.Windows.Forms.Button btnUyeKayit;
         private System.Windows.Forms.Button btnKiralama;
+        private System.Windows.Forms.Button btnYazarKayit;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

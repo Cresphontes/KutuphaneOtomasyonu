@@ -16,15 +16,19 @@ namespace KutuphaneOtomasyonu
         public Form1()
         {
             InitializeComponent();
+            context = new Context();
+
         }
 
         FormKitaplar frmKitaplar;
         FormUyeler frmUyeler;
         FormKiralama frmKiralama;
+        FormYazarlar frmYazarlar;
 
-        public Context context { get; set; }
+        public static Context context { get; set; }
 
-        private void BtnKitapKayit_Click(object sender, EventArgs e)
+
+        private void btnKitapKayit_Click(object sender, EventArgs e)
         {
             frmKitaplar = new FormKitaplar();
             frmKitaplar.Show();
@@ -32,7 +36,7 @@ namespace KutuphaneOtomasyonu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            context = new MockData().context;
+            
         }
 
         private void btnUyeKayit_Click(object sender, EventArgs e)
@@ -45,6 +49,12 @@ namespace KutuphaneOtomasyonu
         {
             frmKiralama = new FormKiralama();
             frmKiralama.Show();
+        }
+
+        private void btnYazarKayit_Click(object sender, EventArgs e)
+        {
+            frmYazarlar = new FormYazarlar();
+            frmYazarlar.Show();
         }
     }
 }

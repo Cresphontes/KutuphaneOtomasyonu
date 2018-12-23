@@ -18,12 +18,13 @@ namespace KutuphaneOtomasyonu
         public FormKitaplar()
         {
             InitializeComponent();
+            context = Form1.context;
+
         }
 
-        List<RadioButton> radioButtons { get; set; } = new List<RadioButton>();
-        List<KitapTurler> turler = new List<KitapTurler>();
         public Context context { get; set; }
-
+        int i = 1;
+        
 
         private void btnKitapKaydet_Click(object sender, EventArgs e)
         {
@@ -31,13 +32,35 @@ namespace KutuphaneOtomasyonu
 
             Kitap kitap = new Kitap();
 
-
             kitap.KitapAd = txtKitapAd.Text;
             kitap.Yayin = txtYayin.Text;
             kitap.Yazar = cmbYazar.SelectedItem as Yazar;
 
 
+            foreach (var item1 in context.RadioButtons)
+            {
+                if (item1.Checked)
+                {
+                    kitap.Tur = (KitapTurler)Enum.Parse(typeof(KitapTurler), item1.Text);
+                }
+            }
+
+           
+
             context.Kitaplar.Add(kitap);
+
+
+
+            ListViewItem item = new ListViewItem(i.ToString());
+
+            item.SubItems.Add(kitap.KitapAd);
+            item.SubItems.Add(kitap.Yazar.ToString());
+            item.SubItems.Add(kitap.Tur.ToString());
+            item.SubItems.Add(kitap.Yayin);
+
+            lvKitaplar.Items.Add(item);
+
+            i++;
 
 
         }
@@ -47,25 +70,39 @@ namespace KutuphaneOtomasyonu
         private void FormKitaplar_Load(object sender, EventArgs e)
         {
 
-
-
-            radioButtons = new List<RadioButton>() { radioBtn1, radioBtn2, radioBtn3, radioBtn4, radioBtn5, radioBtn6, radioBtn7 };
-            turler.AddRange((KitapTurler)Enum.Parse(typeof(KitapTurler)));
-
-            foreach (var item in context.Yazarlar)
-            {
-                item.YazarTurler.Add();
-            }
+            context.RadioButtons.Add(Bilim);
+            context.RadioButtons.Add(Edebiyat);
+            context.RadioButtons.Add(Tarih);
+            context.RadioButtons.Add(Mizah);
+            context.RadioButtons.Add(Psikoloji);
+            context.RadioButtons.Add(Felsefe);
+            context.RadioButtons.Add(Sanat);
 
         }
 
-        private void radioBtn1_CheckedChanged(object sender, EventArgs e)
+
+        private void cmbYazar_DropDown(object sender, EventArgs e)
         {
-            if (radioBtn1.Checked)
+
+            cmbYazar.Items.Clear();
+
+            foreach (var item in context.RadioButtons)
             {
-                foreach (var item in context.Yazarlar)
+                if (item.Checked)
                 {
-                    if(item.)
+                    foreach (var item1 in context.Yazarlar)
+                    {
+                        foreach (var item2 in item1.YazarTurler)
+                        {
+                            if (item2.ToString() == item.Text)
+                            {
+                                cmbYazar.Items.Add(item1);
+                                
+                            }
+                        }
+                    }    
+                    
+                    
                 }
             }
         }
