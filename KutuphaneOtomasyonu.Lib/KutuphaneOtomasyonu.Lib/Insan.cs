@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KutuphaneOtomasyonu.Lib
 {
-    public class Insan
+    public abstract class Insan
     {
         public string Ad { get; set; }
         public string Soyad { get; set; }

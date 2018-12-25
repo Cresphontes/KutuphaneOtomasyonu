@@ -33,13 +33,13 @@
             this.lblYazar = new System.Windows.Forms.Label();
             this.btnYazarGuncelle = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Bilim = new System.Windows.Forms.CheckBox();
-            this.Edebiyat = new System.Windows.Forms.CheckBox();
-            this.Tarih = new System.Windows.Forms.CheckBox();
-            this.Mizah = new System.Windows.Forms.CheckBox();
-            this.Psikoloji = new System.Windows.Forms.CheckBox();
-            this.Feksefe = new System.Windows.Forms.CheckBox();
             this.Sanat = new System.Windows.Forms.CheckBox();
+            this.Feksefe = new System.Windows.Forms.CheckBox();
+            this.Psikoloji = new System.Windows.Forms.CheckBox();
+            this.Mizah = new System.Windows.Forms.CheckBox();
+            this.Tarih = new System.Windows.Forms.CheckBox();
+            this.Edebiyat = new System.Windows.Forms.CheckBox();
+            this.Bilim = new System.Windows.Forms.CheckBox();
             this.btnYazarKaydet = new System.Windows.Forms.Button();
             this.dtYazarDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.lblYazarAd = new System.Windows.Forms.Label();
@@ -52,8 +52,12 @@
             this.DogumTarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.YazdigiTurler = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.kaydetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.açToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblYazarSoyad
@@ -112,55 +116,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Yazar Kitap Türleri";
             // 
-            // Bilim
+            // Sanat
             // 
-            this.Bilim.AutoSize = true;
-            this.Bilim.Location = new System.Drawing.Point(97, 43);
-            this.Bilim.Name = "Bilim";
-            this.Bilim.Size = new System.Drawing.Size(67, 26);
-            this.Bilim.TabIndex = 0;
-            this.Bilim.Text = "Bilim";
-            this.Bilim.UseVisualStyleBackColor = true;
-            // 
-            // Edebiyat
-            // 
-            this.Edebiyat.AutoSize = true;
-            this.Edebiyat.Location = new System.Drawing.Point(170, 43);
-            this.Edebiyat.Name = "Edebiyat";
-            this.Edebiyat.Size = new System.Drawing.Size(93, 26);
-            this.Edebiyat.TabIndex = 1;
-            this.Edebiyat.Text = "Edebiyat";
-            this.Edebiyat.UseVisualStyleBackColor = true;
-            // 
-            // Tarih
-            // 
-            this.Tarih.AutoSize = true;
-            this.Tarih.Location = new System.Drawing.Point(269, 43);
-            this.Tarih.Name = "Tarih";
-            this.Tarih.Size = new System.Drawing.Size(67, 26);
-            this.Tarih.TabIndex = 2;
-            this.Tarih.Text = "Tarih";
-            this.Tarih.UseVisualStyleBackColor = true;
-            // 
-            // Mizah
-            // 
-            this.Mizah.AutoSize = true;
-            this.Mizah.Location = new System.Drawing.Point(342, 43);
-            this.Mizah.Name = "Mizah";
-            this.Mizah.Size = new System.Drawing.Size(73, 26);
-            this.Mizah.TabIndex = 3;
-            this.Mizah.Text = "Mizah";
-            this.Mizah.UseVisualStyleBackColor = true;
-            // 
-            // Psikoloji
-            // 
-            this.Psikoloji.AutoSize = true;
-            this.Psikoloji.Location = new System.Drawing.Point(421, 43);
-            this.Psikoloji.Name = "Psikoloji";
-            this.Psikoloji.Size = new System.Drawing.Size(94, 26);
-            this.Psikoloji.TabIndex = 4;
-            this.Psikoloji.Text = "Psikoloji";
-            this.Psikoloji.UseVisualStyleBackColor = true;
+            this.Sanat.AutoSize = true;
+            this.Sanat.Location = new System.Drawing.Point(608, 43);
+            this.Sanat.Name = "Sanat";
+            this.Sanat.Size = new System.Drawing.Size(70, 26);
+            this.Sanat.TabIndex = 6;
+            this.Sanat.Text = "Sanat";
+            this.Sanat.UseVisualStyleBackColor = true;
             // 
             // Feksefe
             // 
@@ -172,15 +136,55 @@
             this.Feksefe.Text = "Felsefe";
             this.Feksefe.UseVisualStyleBackColor = true;
             // 
-            // Sanat
+            // Psikoloji
             // 
-            this.Sanat.AutoSize = true;
-            this.Sanat.Location = new System.Drawing.Point(608, 43);
-            this.Sanat.Name = "Sanat";
-            this.Sanat.Size = new System.Drawing.Size(70, 26);
-            this.Sanat.TabIndex = 6;
-            this.Sanat.Text = "Sanat";
-            this.Sanat.UseVisualStyleBackColor = true;
+            this.Psikoloji.AutoSize = true;
+            this.Psikoloji.Location = new System.Drawing.Point(421, 43);
+            this.Psikoloji.Name = "Psikoloji";
+            this.Psikoloji.Size = new System.Drawing.Size(94, 26);
+            this.Psikoloji.TabIndex = 4;
+            this.Psikoloji.Text = "Psikoloji";
+            this.Psikoloji.UseVisualStyleBackColor = true;
+            // 
+            // Mizah
+            // 
+            this.Mizah.AutoSize = true;
+            this.Mizah.Location = new System.Drawing.Point(342, 43);
+            this.Mizah.Name = "Mizah";
+            this.Mizah.Size = new System.Drawing.Size(73, 26);
+            this.Mizah.TabIndex = 3;
+            this.Mizah.Text = "Mizah";
+            this.Mizah.UseVisualStyleBackColor = true;
+            // 
+            // Tarih
+            // 
+            this.Tarih.AutoSize = true;
+            this.Tarih.Location = new System.Drawing.Point(269, 43);
+            this.Tarih.Name = "Tarih";
+            this.Tarih.Size = new System.Drawing.Size(67, 26);
+            this.Tarih.TabIndex = 2;
+            this.Tarih.Text = "Tarih";
+            this.Tarih.UseVisualStyleBackColor = true;
+            // 
+            // Edebiyat
+            // 
+            this.Edebiyat.AutoSize = true;
+            this.Edebiyat.Location = new System.Drawing.Point(170, 43);
+            this.Edebiyat.Name = "Edebiyat";
+            this.Edebiyat.Size = new System.Drawing.Size(93, 26);
+            this.Edebiyat.TabIndex = 1;
+            this.Edebiyat.Text = "Edebiyat";
+            this.Edebiyat.UseVisualStyleBackColor = true;
+            // 
+            // Bilim
+            // 
+            this.Bilim.AutoSize = true;
+            this.Bilim.Location = new System.Drawing.Point(97, 43);
+            this.Bilim.Name = "Bilim";
+            this.Bilim.Size = new System.Drawing.Size(67, 26);
+            this.Bilim.TabIndex = 0;
+            this.Bilim.Text = "Bilim";
+            this.Bilim.UseVisualStyleBackColor = true;
             // 
             // btnYazarKaydet
             // 
@@ -291,11 +295,37 @@
             this.panel1.Size = new System.Drawing.Size(923, 736);
             this.panel1.TabIndex = 30;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kaydetToolStripMenuItem,
+            this.açToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.MdiWindowListItem = this.açToolStripMenuItem;
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1362, 24);
+            this.menuStrip1.TabIndex = 31;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // kaydetToolStripMenuItem
+            // 
+            this.kaydetToolStripMenuItem.Name = "kaydetToolStripMenuItem";
+            this.kaydetToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.kaydetToolStripMenuItem.Text = "Kaydet";
+            this.kaydetToolStripMenuItem.Click += new System.EventHandler(this.kaydetToolStripMenuItem_Click);
+            // 
+            // açToolStripMenuItem
+            // 
+            this.açToolStripMenuItem.Name = "açToolStripMenuItem";
+            this.açToolStripMenuItem.Size = new System.Drawing.Size(33, 20);
+            this.açToolStripMenuItem.Text = "Aç";
+            // 
             // FormYazarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Name = "FormYazarlar";
             this.Text = "FormYazarlar";
@@ -305,7 +335,10 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -335,5 +368,8 @@
         private System.Windows.Forms.ColumnHeader DogumTarihi;
         private System.Windows.Forms.ColumnHeader YazdigiTurler;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem kaydetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem açToolStripMenuItem;
     }
 }

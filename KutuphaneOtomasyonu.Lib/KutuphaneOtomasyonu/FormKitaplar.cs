@@ -22,7 +22,7 @@ namespace KutuphaneOtomasyonu
 
         }
 
-        public Context context { get; set; }
+        public static Context context { get; set; }
         int i = 1;
         
 

@@ -1,5 +1,6 @@
 ﻿using KutuphaneOtomasyonu.Lib;
 using KutuphaneOtomasyonu.Lib.Data;
+using KutuphaneOtomasyonu.Lib.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,6 +84,9 @@ namespace KutuphaneOtomasyonu
              
         }
 
-  
+        private void kaydetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportImport.
+        }
     }
 }

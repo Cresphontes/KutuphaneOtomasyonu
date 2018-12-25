@@ -52,6 +52,7 @@
             this.Tur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Yayin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gbTurler.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -292,6 +293,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lvKitaplar);
             this.panel1.Controls.Add(this.txtKitapAd);
@@ -305,15 +308,25 @@
             this.panel1.Controls.Add(this.cmbYazar);
             this.panel1.Location = new System.Drawing.Point(498, 172);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(923, 736);
+            this.panel1.Size = new System.Drawing.Size(867, 712);
             this.panel1.TabIndex = 31;
             // 
             // FormKitaplar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1362, 24);
+            this.menuStrip1.TabIndex = 32;
+            this.menuStrip1.Text = "menuStrip1";
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormKitaplar";
             this.Text = "FormKitaplar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -323,6 +336,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -352,5 +366,6 @@
         private System.Windows.Forms.ColumnHeader Tur;
         private System.Windows.Forms.ColumnHeader Yayin;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

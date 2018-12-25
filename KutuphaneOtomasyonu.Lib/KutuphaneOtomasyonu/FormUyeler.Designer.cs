@@ -44,7 +44,11 @@
             this.lblUyeKitaplar = new System.Windows.Forms.Label();
             this.btnUyeGuncelle = new System.Windows.Forms.Button();
             this.btnUyeKaydet = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.kaydetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.açToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbUye)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUyeAd
@@ -186,12 +190,38 @@
             this.btnUyeKaydet.TabIndex = 20;
             this.btnUyeKaydet.Text = "Kaydet";
             this.btnUyeKaydet.UseVisualStyleBackColor = true;
+            this.btnUyeKaydet.Click += new System.EventHandler(this.btnUyeKaydet_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kaydetToolStripMenuItem,
+            this.açToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.MdiWindowListItem = this.açToolStripMenuItem;
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // kaydetToolStripMenuItem
+            // 
+            this.kaydetToolStripMenuItem.Name = "kaydetToolStripMenuItem";
+            this.kaydetToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.kaydetToolStripMenuItem.Text = "Kaydet";
+            // 
+            // açToolStripMenuItem
+            // 
+            this.açToolStripMenuItem.Name = "açToolStripMenuItem";
+            this.açToolStripMenuItem.Size = new System.Drawing.Size(33, 20);
+            this.açToolStripMenuItem.Text = "Aç";
             // 
             // FormUyeler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnUyeGuncelle);
             this.Controls.Add(this.btnUyeKaydet);
             this.Controls.Add(this.lblUyeKitaplar);
@@ -211,6 +241,8 @@
             this.Name = "FormUyeler";
             this.Text = "FormUyeler";
             ((System.ComponentModel.ISupportInitialize)(this.pbUye)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +266,8 @@
         private System.Windows.Forms.Label lblUyeKitaplar;
         private System.Windows.Forms.Button btnUyeGuncelle;
         private System.Windows.Forms.Button btnUyeKaydet;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem kaydetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem açToolStripMenuItem;
     }
 }
