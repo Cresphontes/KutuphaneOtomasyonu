@@ -1,4 +1,5 @@
 ﻿using KutuphaneOtomasyonu.Lib.Data;
+using KutuphaneOtomasyonu.Lib.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,8 @@ namespace KutuphaneOtomasyonu
         FormYazarlar frmYazarlar;
 
         public static Context context { get; set; }
+        public static Context contextAc { get; set; }
+        
 
 
         private void btnKitapKayit_Click(object sender, EventArgs e)
@@ -55,6 +58,19 @@ namespace KutuphaneOtomasyonu
         {
             frmYazarlar = new FormYazarlar();
             frmYazarlar.Show();
+        }
+
+        private void kaydetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void açToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+            
+
         }
     }
 }

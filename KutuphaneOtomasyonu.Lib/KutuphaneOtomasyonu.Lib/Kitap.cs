@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KutuphaneOtomasyonu.Lib
 {
@@ -12,6 +13,7 @@ namespace KutuphaneOtomasyonu.Lib
         public Yazar Yazar { get; set; }
         public KitapTurler Tur { get; set; }
         public string Yayin { get; set; }
+        public static List<RadioButton> RadioButtons { get; set; } = new List<RadioButton>();
 
 
 

@@ -45,12 +45,14 @@
             this.kaydetToolStripMenuItem.Name = "kaydetToolStripMenuItem";
             this.kaydetToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.kaydetToolStripMenuItem.Text = "Kaydet";
+            this.kaydetToolStripMenuItem.Click += new System.EventHandler(this.kaydetToolStripMenuItem_Click);
             // 
             // açToolStripMenuItem
             // 
             this.açToolStripMenuItem.Name = "açToolStripMenuItem";
             this.açToolStripMenuItem.Size = new System.Drawing.Size(33, 20);
             this.açToolStripMenuItem.Text = "Aç";
+            this.açToolStripMenuItem.Click += new System.EventHandler(this.açToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 

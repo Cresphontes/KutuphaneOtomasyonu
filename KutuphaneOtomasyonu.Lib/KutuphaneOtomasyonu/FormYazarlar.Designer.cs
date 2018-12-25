@@ -53,8 +53,8 @@
             this.YazdigiTurler = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.kaydetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.açToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kaydetYazar = new System.Windows.Forms.ToolStripMenuItem();
+            this.AcYazar = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -235,6 +235,7 @@
             // 
             // lvYazarlar
             // 
+            this.lvYazarlar.CheckBoxes = true;
             this.lvYazarlar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.Ad,
@@ -298,27 +299,28 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kaydetToolStripMenuItem,
-            this.açToolStripMenuItem});
+            this.kaydetYazar,
+            this.AcYazar});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.MdiWindowListItem = this.açToolStripMenuItem;
+            this.menuStrip1.MdiWindowListItem = this.AcYazar;
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1362, 24);
             this.menuStrip1.TabIndex = 31;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // kaydetToolStripMenuItem
+            // kaydetYazar
             // 
-            this.kaydetToolStripMenuItem.Name = "kaydetToolStripMenuItem";
-            this.kaydetToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.kaydetToolStripMenuItem.Text = "Kaydet";
-            this.kaydetToolStripMenuItem.Click += new System.EventHandler(this.kaydetToolStripMenuItem_Click);
+            this.kaydetYazar.Name = "kaydetYazar";
+            this.kaydetYazar.Size = new System.Drawing.Size(55, 20);
+            this.kaydetYazar.Text = "Kaydet";
+            this.kaydetYazar.Click += new System.EventHandler(this.kaydetYazar_Click);
             // 
-            // açToolStripMenuItem
+            // AcYazar
             // 
-            this.açToolStripMenuItem.Name = "açToolStripMenuItem";
-            this.açToolStripMenuItem.Size = new System.Drawing.Size(33, 20);
-            this.açToolStripMenuItem.Text = "Aç";
+            this.AcYazar.Name = "AcYazar";
+            this.AcYazar.Size = new System.Drawing.Size(33, 20);
+            this.AcYazar.Text = "Aç";
+            this.AcYazar.Click += new System.EventHandler(this.AcYazar_Click);
             // 
             // FormYazarlar
             // 
@@ -369,7 +371,7 @@
         private System.Windows.Forms.ColumnHeader YazdigiTurler;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem kaydetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem açToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kaydetYazar;
+        private System.Windows.Forms.ToolStripMenuItem AcYazar;
     }
 }
