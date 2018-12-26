@@ -64,6 +64,19 @@ namespace KutuphaneOtomasyonu
 
             i++;
 
+            txtKitapAd.Text = string.Empty;
+            txtYayin.Text = string.Empty;
+            cmbYazar.SelectedItem = null;
+
+            Bilim.Checked = false;
+            Edebiyat.Checked = false;
+            Tarih.Checked = false;
+            Mizah.Checked = false;
+            Psikoloji.Checked = false;
+            Felsefe.Checked = false;
+            Sanat.Checked = false;
+
+
 
         }
 
@@ -141,5 +154,59 @@ namespace KutuphaneOtomasyonu
                 i++;
             }
         }
+
+        private void lvKitaplar_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+           
+            
+            Kitap seciliKitap = new Kitap();
+
+            foreach (var item in lvKitaplar.CheckedItems)
+            {
+                seciliKitap = item as Kitap;
+
+                txtKitapAd.Text = seciliKitap.KitapAd.ToString();
+                txtYayin.Text = seciliKitap.Yayin.ToString();
+                cmbYazar.SelectedItem = seciliKitap.Yazar;
+
+
+                switch (seciliKitap.Tur)
+                {
+                    case KitapTurler.Bilim:
+                        Bilim.Checked = true;
+                        break;
+                    case KitapTurler.Edebiyat:
+                        Edebiyat.Checked = true;
+                        break;
+                    case KitapTurler.Tarih:
+                        Tarih.Checked = true;
+                        break;
+                    case KitapTurler.Mizah:
+                        Mizah.Checked = true;
+                        break;
+                    case KitapTurler.Psikoloji:
+                        Psikoloji.Checked = true;
+                        break;
+                    case KitapTurler.Felsefe:
+                        Felsefe.Checked = true;
+                        break;
+                    case KitapTurler.Sanat:
+                        Sanat.Checked = true;
+                        break;
+                    default:
+                        break;
+                }
+
+               
+            }
+
+            
+           
+        }
+
+       
+        
+
+   
     }
 }
