@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.ListView;
 
 namespace KutuphaneOtomasyonu
 {
@@ -26,6 +27,7 @@ namespace KutuphaneOtomasyonu
         public static Context context { get; set; }
         public Context contextAc { get; set; }
         int i = 1;
+        
 
 
         private void btnKitapKaydet_Click(object sender, EventArgs e)
@@ -137,7 +139,7 @@ namespace KutuphaneOtomasyonu
             lvKitaplar.Items.Clear();
             context.Kitaplar.Clear();
             context.Kitaplar.AddRange(contextAc.Kitaplar);
-            
+
             i = 1;
 
             foreach (var item in contextAc.Kitaplar)
@@ -155,58 +157,51 @@ namespace KutuphaneOtomasyonu
             }
         }
 
-        private void lvKitaplar_ItemCheck(object sender, ItemCheckEventArgs e)
+
+        private void lvKitaplar_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-            
-            Kitap seciliKitap = new Kitap();
 
-            foreach (var item in lvKitaplar.CheckedItems)
+            if (lvKitaplar.SelectedItems == null) return;
+        
+            var lvItem = lvKitaplar.SelectedItems[0];
+
+            txtKitapAd.Text = lvItem.SubItems[1].Text;
+            txtYayin.Text = lvItem.SubItems[4].Text;
+            cmbYazar.SelectedItem = lvItem.SubItems[2].Text;
+
+
+            switch (lvItem.SubItems[3].Text)
             {
-                seciliKitap = item as Kitap;
-
-                txtKitapAd.Text = seciliKitap.KitapAd.ToString();
-                txtYayin.Text = seciliKitap.Yayin.ToString();
-                cmbYazar.SelectedItem = seciliKitap.Yazar;
-
-
-                switch (seciliKitap.Tur)
-                {
-                    case KitapTurler.Bilim:
-                        Bilim.Checked = true;
-                        break;
-                    case KitapTurler.Edebiyat:
-                        Edebiyat.Checked = true;
-                        break;
-                    case KitapTurler.Tarih:
-                        Tarih.Checked = true;
-                        break;
-                    case KitapTurler.Mizah:
-                        Mizah.Checked = true;
-                        break;
-                    case KitapTurler.Psikoloji:
-                        Psikoloji.Checked = true;
-                        break;
-                    case KitapTurler.Felsefe:
-                        Felsefe.Checked = true;
-                        break;
-                    case KitapTurler.Sanat:
-                        Sanat.Checked = true;
-                        break;
-                    default:
-                        break;
-                }
-
-               
+                case "Bilim":
+                    Bilim.Checked = true;
+                    break;
+                case "Edebiyat":
+                    Edebiyat.Checked = true;
+                    break;
+                case "Tarih":
+                    Tarih.Checked = true;
+                    break;
+                case "Mizah":
+                    Mizah.Checked = true;
+                    break;
+                case "Psikoloji":
+                    Psikoloji.Checked = true;
+                    break;
+                case "Felsefe":
+                    Felsefe.Checked = true;
+                    break;
+                case "Sanat":
+                    Sanat.Checked = true;
+                    break;
+                default:
+                    break;
             }
 
-            
-           
+
         }
 
-       
-        
 
-   
     }
 }
+
+

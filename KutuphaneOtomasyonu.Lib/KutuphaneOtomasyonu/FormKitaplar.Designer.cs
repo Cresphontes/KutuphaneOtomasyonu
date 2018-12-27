@@ -251,21 +251,21 @@
             // 
             // lvKitaplar
             // 
-            this.lvKitaplar.CheckBoxes = true;
             this.lvKitaplar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.Ad,
             this.Yazar,
             this.Tur,
             this.Yayin});
+            this.lvKitaplar.FullRowSelect = true;
             this.lvKitaplar.Location = new System.Drawing.Point(83, 425);
+            this.lvKitaplar.MultiSelect = false;
             this.lvKitaplar.Name = "lvKitaplar";
             this.lvKitaplar.Size = new System.Drawing.Size(714, 247);
             this.lvKitaplar.TabIndex = 30;
             this.lvKitaplar.UseCompatibleStateImageBehavior = false;
             this.lvKitaplar.View = System.Windows.Forms.View.Details;
-            this.lvKitaplar.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.lvKitaplar_ItemCheck);
-            
+            this.lvKitaplar.SelectedIndexChanged += new System.EventHandler(this.lvKitaplar_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -312,7 +312,7 @@
             this.panel1.Controls.Add(this.gbTurler);
             this.panel1.Controls.Add(this.lblYayin);
             this.panel1.Controls.Add(this.cmbYazar);
-            this.panel1.Location = new System.Drawing.Point(527, 184);
+            this.panel1.Location = new System.Drawing.Point(256, 34);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(867, 712);
             this.panel1.TabIndex = 31;
@@ -325,7 +325,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MdiWindowListItem = this.acKitap;
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1362, 24);
             this.menuStrip1.TabIndex = 32;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -347,7 +347,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Name = "FormKitaplar";
