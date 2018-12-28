@@ -23,10 +23,7 @@ namespace KutuphaneOtomasyonu.Lib
 
 
 
-        public override string ToString()
-        {
-            return $"{this.Ad + " " + this.Soyad }";
-        }
+   
 
     }
 }

@@ -18,109 +18,135 @@ namespace KutuphaneOtomasyonu
         public FormYazarlar()
         {
             InitializeComponent();
-            context = Form1.context;
         }
 
-        public static Context context { get; set; }
-        public Context contextAc { get; set; }
 
+        public static List<CheckBox> CheckBoxes { get; set; } = new List<CheckBox>();
         KitapTurler seciliCheckBox;
         int i = 1;
 
 
         private void FormYazarlar_Load(object sender, EventArgs e)
         {
+            i = 1;
 
+            Context db = new Context();
 
-            Yazar.CheckBoxes.Add(Bilim);
-            Yazar.CheckBoxes.Add(Edebiyat);
-            Yazar.CheckBoxes.Add(Tarih);
-            Yazar.CheckBoxes.Add(Mizah);
-            Yazar.CheckBoxes.Add(Psikoloji);
-            Yazar.CheckBoxes.Add(Feksefe);
-            Yazar.CheckBoxes.Add(Sanat);
+            var yazarlar = db.Yazarlar.ToList();
+
+            foreach (var item in yazarlar)
+            {
+                ListViewItem lvItem = new ListViewItem(i.ToString());
+                lvItem.SubItems.Add(item.Ad);
+                lvItem.SubItems.Add(item.Soyad);
+                lvItem.SubItems.Add(item.DogumTarihi.ToString());
+                lvYazarlar.Items.Add(lvItem);
+                i++;
+            }
+
+            
+
+            CheckBoxes.Add(Bilim);
+            CheckBoxes.Add(Edebiyat);
+            CheckBoxes.Add(Tarih);
+            CheckBoxes.Add(Mizah);
+            CheckBoxes.Add(Psikoloji);
+            CheckBoxes.Add(Feksefe);
+            CheckBoxes.Add(Sanat);
 
         }
 
         private void btnYazarKaydet_Click_1(object sender, EventArgs e)
         {
+
+            i = 1;
+
             Yazar yazar = new Yazar();
-
-
+            Tur tur = new Tur();
 
             yazar.Ad = txtYazarAd.Text;
             yazar.Soyad = txtYazarSoyad.Text;
             yazar.DogumTarihi = dtYazarDogumTarihi.Value;
 
 
-            foreach (var item in Yazar.CheckBoxes)
-            {
-                if (item.Checked)
-                {
+            //foreach (var item1 in CheckBoxes)
+            //{
+            //    if (item1.Checked)
+            //    {
 
-                    seciliCheckBox = (KitapTurler)Enum.Parse(typeof(KitapTurler), item.Text);
-                    yazar.YazarTurler.Add(seciliCheckBox);
+            //        foreach (var item2 in tur.turler)
+            //        {
+            //            if (item1.Text == item2.ToString())
 
-                }
-            }
+            //                yazar.YazarTurler.Add((Tur)Enum.Parse(typeof(Tur), item1.Text));
+            //        }
+
+            //    }
+            //}
 
 
-            context.Yazarlar.Add(yazar);
+            Context db = new Context();
+            db.Yazarlar.Add(yazar);
+            db.SaveChanges();
 
 
 
             ListViewItem lvItem = new ListViewItem(i.ToString());
 
-            lvItem.SubItems.Add(yazar.Ad);
-            lvItem.SubItems.Add(yazar.Soyad);
-            lvItem.SubItems.Add(dtYazarDogumTarihi.Text);
 
-            string turlerToString = string.Join(",", yazar.YazarTurler.ToArray());
 
-            lvItem.SubItems.Add(turlerToString);
+            var yazarlar = db.Yazarlar.ToList();
 
+            foreach (var item in yazarlar)
+            {
+                lvItem.SubItems.Add(item.Ad);
+                lvItem.SubItems.Add(item.Soyad);
+                lvItem.SubItems.Add(item.DogumTarihi.ToString());
+                //lvItem.SubItems.Add(item.YazarTurler.ToString());
+            }
+
+          
             lvYazarlar.Items.Add(lvItem);
             i++;
 
 
 
-
         }
 
-        private void kaydetYazar_Click(object sender, EventArgs e)
-        {
-            ExportImport kaydet = new ExportImport();
-            kaydet.Export(context);
-        }
+        //private void kaydetYazar_Click(object sender, EventArgs e)
+        //{
+        //    ExportImport kaydet = new ExportImport();
+        //    kaydet.Export(context);
+        //}
 
-        private void AcYazar_Click(object sender, EventArgs e)
-        {
-            ExportImport ac = new ExportImport();
+        //private void AcYazar_Click(object sender, EventArgs e)
+        //{
+        //    ExportImport ac = new ExportImport();
 
-            contextAc = ac.Import();
+        //    contextAc = ac.Import();
 
-            lvYazarlar.Items.Clear();
-            context.Yazarlar.Clear();
-            context.Yazarlar.AddRange(contextAc.Yazarlar);
+        //    lvYazarlar.Items.Clear();
+        //    context.Kitaplar.Clear();
+        //    context.Yazarlar.AddRange(contextAc.Yazarlar);
 
-            i = 1;
+        //    i = 1;
 
-            foreach (var item in contextAc.Yazarlar)
-            {
-                ListViewItem lvItem = new ListViewItem(i.ToString());
+        //    foreach (var item in contextAc.Yazarlar)
+        //    {
+        //        ListViewItem lvItem = new ListViewItem(i.ToString());
 
-                lvItem.SubItems.Add(item.Ad);
-                lvItem.SubItems.Add(item.Soyad);
-                lvItem.SubItems.Add(dtYazarDogumTarihi.Text);
+        //        lvItem.SubItems.Add(item.Ad);
+        //        lvItem.SubItems.Add(item.Soyad);
+        //        lvItem.SubItems.Add(dtYazarDogumTarihi.Text);
 
-                string turlerToString = string.Join(",", item.YazarTurler.ToArray());
+        //        string turlerToString = string.Join(",", item.YazarTurler.ToArray());
 
-                lvItem.SubItems.Add(turlerToString);
+        //        lvItem.SubItems.Add(turlerToString);
 
-                lvYazarlar.Items.Add(lvItem);
-                i++;
-            }
-        }
+        //        lvYazarlar.Items.Add(lvItem);
+        //        i++;
+        //    }
+        //}
 
       
     }

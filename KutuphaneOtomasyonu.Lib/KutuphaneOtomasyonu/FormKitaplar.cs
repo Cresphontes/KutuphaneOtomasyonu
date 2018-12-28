@@ -20,48 +20,57 @@ namespace KutuphaneOtomasyonu
         public FormKitaplar()
         {
             InitializeComponent();
-            context = Form1.context;
 
         }
 
-        public static Context context { get; set; }
-        public Context contextAc { get; set; }
         int i = 1;
-        
+        public static List<RadioButton> RadioButtons { get; set; } = new List<RadioButton>();
 
 
         private void btnKitapKaydet_Click(object sender, EventArgs e)
         {
 
+            i = 1;
 
             Kitap kitap = new Kitap();
+            Tur tur = new Tur();
 
             kitap.KitapAd = txtKitapAd.Text;
             kitap.Yayin = txtYayin.Text;
             kitap.Yazar = cmbYazar.SelectedItem as Yazar;
 
 
-            foreach (var item1 in Kitap.RadioButtons)
-            {
-                if (item1.Checked)
-                {
-                    kitap.Tur = (KitapTurler)Enum.Parse(typeof(KitapTurler), item1.Text);
-                }
-            }
+            //foreach (var item1 in RadioButtons)
+            //{
+            //    if (item1.Checked)
+            //    {
+            //        foreach (var item2 in tur.turler)
+            //        {
+            //            if (item1.Text == item2.ToString())
+            //                kitap.Tur = (Tur)Enum.Parse(typeof(Tur), item1.Text);
+            //        }
+                   
+            //    }
+            //}
 
 
-
-            context.Kitaplar.Add(kitap);
-
+            Context db = new Context(); 
+            db.Kitaplar.Add(kitap);
+            db.SaveChanges();
 
 
             ListViewItem lvItem = new ListViewItem(i.ToString());
 
-            lvItem.SubItems.Add(kitap.KitapAd);
-            lvItem.SubItems.Add(kitap.Yazar.Ad);
-            lvItem.SubItems.Add(kitap.Tur.ToString());
-            lvItem.SubItems.Add(kitap.Yayin);
+            var Kitaplar = db.Kitaplar.ToList();
 
+            foreach (var item in Kitaplar)
+            {
+                lvItem.SubItems.Add(kitap.KitapAd);
+                lvItem.SubItems.Add(kitap.Yazar.Ad);
+                //lvItem.SubItems.Add(kitap.Tur.ToString());
+                lvItem.SubItems.Add(kitap.Yayin);
+            }
+        
             lvKitaplar.Items.Add(lvItem);
 
             i++;
@@ -87,13 +96,44 @@ namespace KutuphaneOtomasyonu
         private void FormKitaplar_Load(object sender, EventArgs e)
         {
 
-            Kitap.RadioButtons.Add(Bilim);
-            Kitap.RadioButtons.Add(Edebiyat);
-            Kitap.RadioButtons.Add(Tarih);
-            Kitap.RadioButtons.Add(Mizah);
-            Kitap.RadioButtons.Add(Psikoloji);
-            Kitap.RadioButtons.Add(Felsefe);
-            Kitap.RadioButtons.Add(Sanat);
+            i = 1;
+
+            Context db = new Context();
+
+            var Kitaplar = db.Kitaplar.ToList();
+
+            foreach (var item in Kitaplar)
+            {
+                ListViewItem lvItem = new ListViewItem(i.ToString());
+                lvItem.SubItems.Add(item.KitapAd);
+
+                lvItem.SubItems.Add(item.Yazar.Ad);
+                //lvItem.SubItems.Add(item.Tur.ToString());
+                lvItem.SubItems.Add(item.Yayin);
+                lvKitaplar.Items.Add(lvItem);
+
+                i++;
+            }
+
+     
+
+            RadioButtons.Add(Bilim);
+            RadioButtons.Add(Edebiyat);
+            RadioButtons.Add(Tarih);
+            RadioButtons.Add(Mizah);
+            RadioButtons.Add(Psikoloji);
+            RadioButtons.Add(Felsefe);
+            RadioButtons.Add(Sanat);
+
+            Tur tur = new Tur();
+
+            //tur.turler.Add(KitapTurler.Bilim);
+            //tur.turler.Add(KitapTurler.Edebiyat);
+            //tur.turler.Add(KitapTurler.Tarih);
+            //tur.turler.Add(KitapTurler.Mizah);
+            //tur.turler.Add(KitapTurler.Psikoloji);
+            //tur.turler.Add(KitapTurler.Felsefe);
+            //tur.turler.Add(KitapTurler.Sanat);
 
         }
 
@@ -101,61 +141,64 @@ namespace KutuphaneOtomasyonu
         private void cmbYazar_DropDown(object sender, EventArgs e)
         {
 
+            Context db = new Context();
+          
+
             cmbYazar.Items.Clear();
 
-            foreach (var item in Kitap.RadioButtons)
-            {
-                if (item.Checked)
-                {
-                    foreach (var item1 in context.Yazarlar)
-                    {
-                        foreach (var item2 in item1.YazarTurler)
-                        {
-                            if (item2.ToString() == item.Text)
-                            {
-                                cmbYazar.Items.Add(item1);
+            //foreach (var item in RadioButtons)
+            //{
+            //    if (item.Checked)
+            //    {
+            //        foreach (var item1 in db.Yazarlar)
+            //        {
+            //            foreach (var item2 in item1.YazarTurler)
+            //            {
+            //                if (item2.ToString() == item.Text)
+            //                {
+            //                    cmbYazar.Items.Add(item1);
 
-                            }
-                        }
-                    }
+            //                }
+            //            }
+            //        }
 
 
-                }
-            }
+            //    }
+            //}
         }
 
-        private void kaydetKitap_Click(object sender, EventArgs e)
-        {
-            ExportImport kaydet = new ExportImport();
-            kaydet.Export(context);
-        }
+        //private void kaydetKitap_Click(object sender, EventArgs e)
+        //{
+        //    ExportImport kaydet = new ExportImport();
+        //    kaydet.Export(context);
+        //}
 
-        private void acKitap_Click(object sender, EventArgs e)
-        {
-            ExportImport ac = new ExportImport();
+        //private void acKitap_Click(object sender, EventArgs e)
+        //{
+        //    ExportImport ac = new ExportImport();
 
-            contextAc = ac.Import();
+        //    contextAc = ac.Import();
 
-            lvKitaplar.Items.Clear();
-            context.Kitaplar.Clear();
-            context.Kitaplar.AddRange(contextAc.Kitaplar);
+        //    lvKitaplar.Items.Clear();
+            
+        //    context.Kitaplar.AddRange(contextAc.Kitaplar);
 
-            i = 1;
+        //    i = 1;
 
-            foreach (var item in contextAc.Kitaplar)
-            {
-                ListViewItem lvItem = new ListViewItem(i.ToString());
+        //    foreach (var item in contextAc.Kitaplar)
+        //    {
+        //        ListViewItem lvItem = new ListViewItem(i.ToString());
 
-                lvItem.SubItems.Add(item.KitapAd);
-                lvItem.SubItems.Add(item.Yazar.ToString());
-                lvItem.SubItems.Add(item.Tur.ToString());
-                lvItem.SubItems.Add(item.Yayin);
+        //        lvItem.SubItems.Add(item.KitapAd);
+        //        lvItem.SubItems.Add(item.Yazar.ToString());
+        //        lvItem.SubItems.Add(item.Tur.ToString());
+        //        lvItem.SubItems.Add(item.Yayin);
 
-                lvKitaplar.Items.Add(lvItem);
+        //        lvKitaplar.Items.Add(lvItem);
 
-                i++;
-            }
-        }
+        //        i++;
+        //    }
+        //}
 
 
         private void lvKitaplar_SelectedIndexChanged(object sender, EventArgs e)

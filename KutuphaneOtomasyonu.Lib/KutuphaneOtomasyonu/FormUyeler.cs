@@ -18,7 +18,6 @@ namespace KutuphaneOtomasyonu
         {
 
             InitializeComponent();
-            context = Form1.context;
         }
 
 

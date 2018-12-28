@@ -313,14 +313,14 @@
             this.kaydetYazar.Name = "kaydetYazar";
             this.kaydetYazar.Size = new System.Drawing.Size(55, 20);
             this.kaydetYazar.Text = "Kaydet";
-            this.kaydetYazar.Click += new System.EventHandler(this.kaydetYazar_Click);
+            //this.kaydetYazar.Click += new System.EventHandler(this.kaydetYazar_Click);
             // 
             // AcYazar
             // 
             this.AcYazar.Name = "AcYazar";
             this.AcYazar.Size = new System.Drawing.Size(33, 20);
             this.AcYazar.Text = "Aç";
-            this.AcYazar.Click += new System.EventHandler(this.AcYazar_Click);
+            //this.AcYazar.Click += new System.EventHandler(this.AcYazar_Click);
             // 
             // FormYazarlar
             // 

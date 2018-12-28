@@ -312,7 +312,7 @@
             this.panel1.Controls.Add(this.gbTurler);
             this.panel1.Controls.Add(this.lblYayin);
             this.panel1.Controls.Add(this.cmbYazar);
-            this.panel1.Location = new System.Drawing.Point(256, 34);
+            this.panel1.Location = new System.Drawing.Point(252, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(867, 712);
             this.panel1.TabIndex = 31;
@@ -325,7 +325,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MdiWindowListItem = this.acKitap;
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1362, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1354, 24);
             this.menuStrip1.TabIndex = 32;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -334,20 +334,18 @@
             this.kaydetKitap.Name = "kaydetKitap";
             this.kaydetKitap.Size = new System.Drawing.Size(55, 20);
             this.kaydetKitap.Text = "Kaydet";
-            this.kaydetKitap.Click += new System.EventHandler(this.kaydetKitap_Click);
             // 
             // acKitap
             // 
             this.acKitap.Name = "acKitap";
             this.acKitap.Size = new System.Drawing.Size(33, 20);
             this.acKitap.Text = "Aç";
-            this.acKitap.Click += new System.EventHandler(this.acKitap_Click);
             // 
             // FormKitaplar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Name = "FormKitaplar";

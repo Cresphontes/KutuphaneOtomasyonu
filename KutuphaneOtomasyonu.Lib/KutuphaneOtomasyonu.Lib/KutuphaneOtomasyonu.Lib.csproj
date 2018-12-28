@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FakeData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FakeData.1.0.0\lib\FakeData.dll</HintPath>
     </Reference>
@@ -37,6 +43,7 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -49,7 +56,6 @@
   <ItemGroup>
     <Compile Include="Business\YazarBusiness.cs" />
     <Compile Include="Business\UyeBusiness.cs" />
-    <Compile Include="Data\Context.cs" />
     <Compile Include="Helper\ExportImport.cs" />
     <Compile Include="IAtamaKitapYazar.cs" />
     <Compile Include="IAtamaKitapUye.cs" />
@@ -57,12 +63,67 @@
     <Compile Include="Kayit.cs" />
     <Compile Include="Kitap.cs" />
     <Compile Include="KitapTurler.cs" />
+    <Compile Include="Migrations\201812280612126_a1.cs" />
+    <Compile Include="Migrations\201812280612126_a1.Designer.cs">
+      <DependentUpon>201812280612126_a1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280622391_a2.cs" />
+    <Compile Include="Migrations\201812280622391_a2.Designer.cs">
+      <DependentUpon>201812280622391_a2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280627005_a3.cs" />
+    <Compile Include="Migrations\201812280627005_a3.Designer.cs">
+      <DependentUpon>201812280627005_a3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280636196_a5.cs" />
+    <Compile Include="Migrations\201812280636196_a5.Designer.cs">
+      <DependentUpon>201812280636196_a5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280644338_a6.cs" />
+    <Compile Include="Migrations\201812280644338_a6.Designer.cs">
+      <DependentUpon>201812280644338_a6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280650173_a7.cs" />
+    <Compile Include="Migrations\201812280650173_a7.Designer.cs">
+      <DependentUpon>201812280650173_a7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812280758130_a9.cs" />
+    <Compile Include="Migrations\201812280758130_a9.Designer.cs">
+      <DependentUpon>201812280758130_a9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Uye.cs" />
     <Compile Include="Yazar.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812280612126_a1.resx">
+      <DependentUpon>201812280612126_a1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280622391_a2.resx">
+      <DependentUpon>201812280622391_a2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280627005_a3.resx">
+      <DependentUpon>201812280627005_a3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280636196_a5.resx">
+      <DependentUpon>201812280636196_a5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280644338_a6.resx">
+      <DependentUpon>201812280644338_a6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280650173_a7.resx">
+      <DependentUpon>201812280650173_a7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280758130_a9.resx">
+      <DependentUpon>201812280758130_a9.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,6 @@ namespace KutuphaneOtomasyonu
         public Form1()
         {
             InitializeComponent();
-            context = new Context();
 
         }
 
@@ -25,9 +24,6 @@ namespace KutuphaneOtomasyonu
         FormUyeler frmUyeler;
         FormKiralama frmKiralama;
         FormYazarlar frmYazarlar;
-
-        public static Context context { get; set; }
-        public static Context contextAc { get; set; }
         
 
 
@@ -39,7 +35,9 @@ namespace KutuphaneOtomasyonu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            Tur tur = new Tur();
+
+
         }
 
         private void btnUyeKayit_Click(object sender, EventArgs e)
