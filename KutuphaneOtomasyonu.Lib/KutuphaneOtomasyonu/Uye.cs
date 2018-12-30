@@ -19,8 +19,6 @@ namespace KutuphaneOtomasyonu.Lib
         public string Email { get; set; }
 
 
-        public virtual ICollection<Kitap> UyeKitaplar { get; set; } = new HashSet<Kitap>();
-
 
 
    

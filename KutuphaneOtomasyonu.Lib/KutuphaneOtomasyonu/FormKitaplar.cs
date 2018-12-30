@@ -33,11 +33,11 @@ namespace KutuphaneOtomasyonu
             i = 1;
 
             Kitap kitap = new Kitap();
-            Tur tur = new Tur();
+           
 
             kitap.KitapAd = txtKitapAd.Text;
             kitap.Yayin = txtYayin.Text;
-            kitap.Yazar = cmbYazar.SelectedItem as Yazar;
+            //kitap.Yazar = cmbYazar.SelectedItem as Yazar;
 
 
             //foreach (var item1 in RadioButtons)
@@ -66,7 +66,7 @@ namespace KutuphaneOtomasyonu
             foreach (var item in Kitaplar)
             {
                 lvItem.SubItems.Add(kitap.KitapAd);
-                lvItem.SubItems.Add(kitap.Yazar.Ad);
+                //lvItem.SubItems.Add(kitap.Yazar.Ad);
                 //lvItem.SubItems.Add(kitap.Tur.ToString());
                 lvItem.SubItems.Add(kitap.Yayin);
             }
@@ -107,7 +107,7 @@ namespace KutuphaneOtomasyonu
                 ListViewItem lvItem = new ListViewItem(i.ToString());
                 lvItem.SubItems.Add(item.KitapAd);
 
-                lvItem.SubItems.Add(item.Yazar.Ad);
+                //lvItem.SubItems.Add(item.Yazar.Ad);
                 //lvItem.SubItems.Add(item.Tur.ToString());
                 lvItem.SubItems.Add(item.Yayin);
                 lvKitaplar.Items.Add(lvItem);
@@ -125,7 +125,7 @@ namespace KutuphaneOtomasyonu
             RadioButtons.Add(Felsefe);
             RadioButtons.Add(Sanat);
 
-            Tur tur = new Tur();
+            
 
             //tur.turler.Add(KitapTurler.Bilim);
             //tur.turler.Add(KitapTurler.Edebiyat);

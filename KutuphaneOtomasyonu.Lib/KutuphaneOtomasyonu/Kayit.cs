@@ -14,8 +14,14 @@ namespace KutuphaneOtomasyonu.Lib
     {
         [Key]
         public int KayitId { get; set; }
-        //public Kitap Kitap { get; set; }
-        //public Uye Uye { get; set; }
+
+        
+        public int UyeId { get; set; }
+
+        [ForeignKey("UyeId")]
+        public Uye Uye { get; set; }
+        
+        
 
     }
 }

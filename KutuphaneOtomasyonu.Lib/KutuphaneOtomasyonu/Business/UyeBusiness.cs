@@ -10,7 +10,7 @@ namespace KutuphaneOtomasyonu.Lib.Business
     {
         public void AtamaYapKitapUye(Uye nereye, Kitap neyi)
         {
-            nereye.UyeKitaplar.Add(neyi);
+            //nereye.UyeKitaplar.Add(neyi);
         }
     }
 }

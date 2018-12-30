@@ -17,9 +17,11 @@ namespace KutuphaneOtomasyonu.Lib.Data
         }
 
         public DbSet<Kitap> Kitaplar { get; set; } 
-        public DbSet<Yazar> Yazarlar { get; set; } 
-        public DbSet<Uye> Uyeler { get; set; }
+        public DbSet<Yazar> Yazarlar { get; set; }
+
         public DbSet<Tur> Turler { get; set; }
+        public DbSet<Uye> Uyeler { get; set; }
+        
         public DbSet<Kayit> Kayitlar { get; set; }
        
 

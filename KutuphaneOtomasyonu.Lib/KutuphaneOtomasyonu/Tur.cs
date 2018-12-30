@@ -9,32 +9,19 @@ using System.Threading.Tasks;
 
 namespace KutuphaneOtomasyonu
 {
-
-    [Table("Türler")]
+    [Table("Turler")]
     public class Tur
     {
+
+        public Tur()
+        {
+            TurYazarlar = new List<Yazar>();
+        }
+
         [Key]
-        public int TurId{ get; set; }
+        public int TurId { get; set; }
 
-        public string TurAd { get; set; }
-
-        public int YazarId { get; set; }
-        [ForeignKey("YazarId")]
-        public Yazar yazar { get; set; }
-
-
-        public int KitapId { get; set; }
-        [ForeignKey("KitapId")]
-        public Kitap kitap { get; set; }
-
-
-
-
-
-
-
-
-        public virtual ICollection<Kitap> TurKitaplar { get; set; } = new HashSet<Kitap>();
-        public virtual ICollection<Yazar> TurYazarlar { get; set; } = new HashSet<Yazar>();
+        public string TurAdi { get; set; }
+        public List<Yazar> TurYazarlar { get; set; }
     }
 }

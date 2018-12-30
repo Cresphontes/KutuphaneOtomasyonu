@@ -22,26 +22,42 @@ namespace KutuphaneOtomasyonu
 
 
         public static List<CheckBox> CheckBoxes { get; set; } = new List<CheckBox>();
-        KitapTurler seciliCheckBox;
+        
+
         int i = 1;
 
 
         private void FormYazarlar_Load(object sender, EventArgs e)
         {
+
+      
+
+
             i = 1;
 
             Context db = new Context();
 
             var yazarlar = db.Yazarlar.ToList();
+            var turler = db.Turler.ToList();
+
+            YazarTur yazarTur = new YazarTur();
 
             foreach (var item in yazarlar)
             {
-                ListViewItem lvItem = new ListViewItem(i.ToString());
-                lvItem.SubItems.Add(item.Ad);
-                lvItem.SubItems.Add(item.Soyad);
-                lvItem.SubItems.Add(item.DogumTarihi.ToString());
-                lvYazarlar.Items.Add(lvItem);
-                i++;
+                foreach (var item1 in turler)
+                {
+                    ListViewItem lvItem = new ListViewItem(i.ToString());
+                    lvItem.SubItems.Add(item.Ad);
+                    lvItem.SubItems.Add(item.Soyad);
+                    lvItem.SubItems.Add(item.DogumTarihi.ToString());
+                    lvItem.SubItems.Add(yazarTur.TurId.ToString());
+                    lvYazarlar.Items.Add(lvItem);
+                    i++;
+                }
+           
+                
+
+            
             }
 
             
@@ -64,28 +80,39 @@ namespace KutuphaneOtomasyonu
             Yazar yazar = new Yazar();
             Tur tur = new Tur();
 
+
+            
             yazar.Ad = txtYazarAd.Text;
             yazar.Soyad = txtYazarSoyad.Text;
             yazar.DogumTarihi = dtYazarDogumTarihi.Value;
+         
 
 
-            //foreach (var item1 in CheckBoxes)
-            //{
-            //    if (item1.Checked)
-            //    {
+            
 
-            //        foreach (var item2 in tur.turler)
-            //        {
-            //            if (item1.Text == item2.ToString())
+            foreach (var item1 in CheckBoxes)
+            {
+                if (item1.Checked)
+                {
+                    tur.TurAdi = item1.Text;
+                    yazar.YazarTurler.Add(tur);
+                    tur.TurYazarlar.Add(yazar);
 
-            //                yazar.YazarTurler.Add((Tur)Enum.Parse(typeof(Tur), item1.Text));
-            //        }
+                }      
 
-            //    }
-            //}
-
+            }
 
             Context db = new Context();
+
+            foreach (var item in db.Turler)
+            {
+                if (item.ToString() != tur.ToString())
+                {
+                    db.Turler.Add(tur);
+                }
+            }
+            
+
             db.Yazarlar.Add(yazar);
             db.SaveChanges();
 
@@ -102,7 +129,7 @@ namespace KutuphaneOtomasyonu
                 lvItem.SubItems.Add(item.Ad);
                 lvItem.SubItems.Add(item.Soyad);
                 lvItem.SubItems.Add(item.DogumTarihi.ToString());
-                //lvItem.SubItems.Add(item.YazarTurler.ToString());
+                //lvItem.SubItems.Add(item.YazarTur.ToString());
             }
 
           

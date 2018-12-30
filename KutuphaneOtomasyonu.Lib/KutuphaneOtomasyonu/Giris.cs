@@ -35,7 +35,7 @@ namespace KutuphaneOtomasyonu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Tur tur = new Tur();
+            
 
 
         }

@@ -7,13 +7,13 @@ namespace KutuphaneOtomasyonu.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class a : IMigrationMetadata
+    public sealed partial class s3 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(a));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(s3));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812281149552_a"; }
+            get { return "201812302119009_s3"; }
         }
         
         string IMigrationMetadata.Source

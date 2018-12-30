@@ -14,11 +14,22 @@ namespace KutuphaneOtomasyonu.Lib
     [Table("Yazarlar")]
     public class Yazar:Insan
     {
+
+        public Yazar()
+        {
+            YazarKitaplar = new List<Kitap>();
+            YazarTurler = new List<Tur>();
+        }
+
         [Key]
         public int YazarId { get; set; }
+
+
+        public List<Tur> YazarTurler { get; set; }
+        public virtual List<Kitap> YazarKitaplar { get; set; }
        
-        public virtual ICollection<Kitap> YazarKitaplar { get; set; } = new HashSet<Kitap>();
-     
+
+
 
 
     }
