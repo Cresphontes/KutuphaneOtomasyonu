@@ -24,8 +24,8 @@ namespace KutuphaneOtomasyonu
         FormUyeler frmUyeler;
         FormKiralama frmKiralama;
         FormYazarlar frmYazarlar;
-        
 
+        Context db = new Context();
 
         private void btnKitapKayit_Click(object sender, EventArgs e)
         {
@@ -35,7 +35,7 @@ namespace KutuphaneOtomasyonu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
 
 
         }

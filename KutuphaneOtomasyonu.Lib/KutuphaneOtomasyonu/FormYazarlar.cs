@@ -49,6 +49,7 @@ namespace KutuphaneOtomasyonu
                     lvItem.SubItems.Add(item.Ad);
                     lvItem.SubItems.Add(item.Soyad);
                     lvItem.SubItems.Add(item.DogumTarihi.ToString());
+
                 foreach (var item1 in item.YazarTurler)
                 {
                     lvItem.SubItems.Add(item1.TurAdi);
@@ -88,36 +89,55 @@ namespace KutuphaneOtomasyonu
             yazar.Ad = txtYazarAd.Text;
             yazar.Soyad = txtYazarSoyad.Text;
             yazar.DogumTarihi = dtYazarDogumTarihi.Value;
-         
 
 
             
+
+
 
             foreach (var item1 in CheckBoxes)
             {
                 if (item1.Checked)
                 {
+
                     Tur tur = new Tur();
                     tur.TurAdi = item1.Text;
-                    yazar.YazarTurler.Add(tur);
-                    tur.TurYazarlar.Add(yazar);
+                   
 
                     if (db.Turler.Count() == 0)
                     {
                         db.Turler.Add(tur);
+
                     }
                     else
                     {
 
-                        foreach (var item in db.Turler)
+                        foreach (var item in db.Turler.ToList())
                         {
-                            if (item.ToString() != tur.ToString())
+                            if (item.TurAdi != tur.TurAdi)
                             {
                                 db.Turler.Add(tur);
+                                break;
                             }
                         }
 
                     }
+
+                    db.SaveChanges();
+
+
+                    foreach (var item2 in db.Turler.ToList())
+                    {
+                        if(item2.TurAdi == item1.Text)
+                        {
+                            yazar.YazarTurler.Add(item2);
+                            tur.TurYazarlar.Add(yazar);
+                            break;
+
+                        }
+                       
+                    }
+                  
                 }      
 
             }
@@ -129,14 +149,13 @@ namespace KutuphaneOtomasyonu
             lvYazarlar.Items.Clear();
 
 
-            ListViewItem lvItem = new ListViewItem(i.ToString());
-
-
 
             var yazarlar = db.Yazarlar.ToList();
 
             foreach (var item in yazarlar)
             {
+                ListViewItem lvItem = new ListViewItem(i.ToString());
+
                 lvItem.SubItems.Add(item.Ad);
                 lvItem.SubItems.Add(item.Soyad);
                 lvItem.SubItems.Add(item.DogumTarihi.ToString());
@@ -145,12 +164,12 @@ namespace KutuphaneOtomasyonu
                     lvItem.SubItems.Add(item1.TurAdi);
                 }
 
-
+                lvYazarlar.Items.Add(lvItem);
+                i++;
             }
 
 
-            lvYazarlar.Items.Add(lvItem);
-            i++;
+           
 
 
 

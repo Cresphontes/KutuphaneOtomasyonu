@@ -109,6 +109,18 @@
     <Compile Include="Migrations\201812311429585_b3.Designer.cs">
       <DependentUpon>201812311429585_b3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812311459414_b4.cs" />
+    <Compile Include="Migrations\201812311459414_b4.Designer.cs">
+      <DependentUpon>201812311459414_b4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812311505395_b5.cs" />
+    <Compile Include="Migrations\201812311505395_b5.Designer.cs">
+      <DependentUpon>201812311505395_b5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812311522586_b6.cs" />
+    <Compile Include="Migrations\201812311522586_b6.Designer.cs">
+      <DependentUpon>201812311522586_b6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +150,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812311429585_b3.resx">
       <DependentUpon>201812311429585_b3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311459414_b4.resx">
+      <DependentUpon>201812311459414_b4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311505395_b5.resx">
+      <DependentUpon>201812311505395_b5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311522586_b6.resx">
+      <DependentUpon>201812311522586_b6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
