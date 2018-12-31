@@ -101,11 +101,12 @@ namespace KutuphaneOtomasyonu
                 {
 
                     Tur tur = new Tur();
-                    tur.TurAdi = item1.Text;
+                    
                    
 
                     if (db.Turler.Count() == 0)
                     {
+                        tur.TurAdi = item1.Text;
                         db.Turler.Add(tur);
 
                     }
@@ -116,6 +117,7 @@ namespace KutuphaneOtomasyonu
                         {
                             if (item.TurAdi != tur.TurAdi)
                             {
+                                tur.TurAdi = item1.Text;
                                 db.Turler.Add(tur);
                                 break;
                             }
