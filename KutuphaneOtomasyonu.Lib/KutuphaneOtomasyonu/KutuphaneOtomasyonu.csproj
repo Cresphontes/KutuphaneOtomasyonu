@@ -101,13 +101,20 @@
     <Compile Include="Migrations\201812302119009_s3.Designer.cs">
       <DependentUpon>201812302119009_s3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812311329018_b2.cs" />
+    <Compile Include="Migrations\201812311329018_b2.Designer.cs">
+      <DependentUpon>201812311329018_b2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812311429585_b3.cs" />
+    <Compile Include="Migrations\201812311429585_b3.Designer.cs">
+      <DependentUpon>201812311429585_b3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tur.cs" />
     <Compile Include="Uye.cs" />
     <Compile Include="Yazar.cs" />
-    <Compile Include="YazarTur.cs" />
     <EmbeddedResource Include="FormKiralama.resx">
       <DependentUpon>FormKiralama.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +132,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812302119009_s3.resx">
       <DependentUpon>201812302119009_s3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311329018_b2.resx">
+      <DependentUpon>201812311329018_b2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812311429585_b3.resx">
+      <DependentUpon>201812311429585_b3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

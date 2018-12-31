@@ -50,11 +50,12 @@
             this.Ad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Soyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DogumTarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.YazdigiTurler = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Tur1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kaydetYazar = new System.Windows.Forms.ToolStripMenuItem();
             this.AcYazar = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tur2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -241,7 +242,8 @@
             this.Ad,
             this.Soyad,
             this.DogumTarihi,
-            this.YazdigiTurler});
+            this.Tur1,
+            this.Tur2});
             this.lvYazarlar.Location = new System.Drawing.Point(81, 433);
             this.lvYazarlar.Name = "lvYazarlar";
             this.lvYazarlar.Size = new System.Drawing.Size(785, 286);
@@ -272,11 +274,11 @@
             this.DogumTarihi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.DogumTarihi.Width = 201;
             // 
-            // YazdigiTurler
+            // Tur1
             // 
-            this.YazdigiTurler.Text = "Yazdığı Türler";
-            this.YazdigiTurler.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.YazdigiTurler.Width = 246;
+            this.Tur1.Text = "Tür 1";
+            this.Tur1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Tur1.Width = 155;
             // 
             // panel1
             // 
@@ -304,7 +306,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MdiWindowListItem = this.AcYazar;
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1362, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1468, 24);
             this.menuStrip1.TabIndex = 31;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -313,20 +315,24 @@
             this.kaydetYazar.Name = "kaydetYazar";
             this.kaydetYazar.Size = new System.Drawing.Size(55, 20);
             this.kaydetYazar.Text = "Kaydet";
-            //this.kaydetYazar.Click += new System.EventHandler(this.kaydetYazar_Click);
             // 
             // AcYazar
             // 
             this.AcYazar.Name = "AcYazar";
             this.AcYazar.Size = new System.Drawing.Size(33, 20);
             this.AcYazar.Text = "Aç";
-            //this.AcYazar.Click += new System.EventHandler(this.AcYazar_Click);
+            // 
+            // Tur2
+            // 
+            this.Tur2.Text = "Tür 2";
+            this.Tur2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Tur2.Width = 92;
             // 
             // FormYazarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1468, 900);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Name = "FormYazarlar";
@@ -368,10 +374,11 @@
         private System.Windows.Forms.ColumnHeader Ad;
         private System.Windows.Forms.ColumnHeader Soyad;
         private System.Windows.Forms.ColumnHeader DogumTarihi;
-        private System.Windows.Forms.ColumnHeader YazdigiTurler;
+        private System.Windows.Forms.ColumnHeader Tur1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem kaydetYazar;
         private System.Windows.Forms.ToolStripMenuItem AcYazar;
+        private System.Windows.Forms.ColumnHeader Tur2;
     }
 }

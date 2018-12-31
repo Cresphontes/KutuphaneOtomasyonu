@@ -25,7 +25,7 @@ namespace KutuphaneOtomasyonu.Lib
         public int YazarId { get; set; }
 
 
-        public List<Tur> YazarTurler { get; set; }
+        public virtual List<Tur> YazarTurler { get; set; }
         public virtual List<Kitap> YazarKitaplar { get; set; }
        
 
