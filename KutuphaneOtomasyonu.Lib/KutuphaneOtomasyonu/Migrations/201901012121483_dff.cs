@@ -3,7 +3,7 @@ namespace KutuphaneOtomasyonu.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class b3 : DbMigration
+    public partial class dff : DbMigration
     {
         public override void Up()
         {

@@ -25,13 +25,14 @@ namespace KutuphaneOtomasyonu
         
 
         int i = 1;
+        bool control = false;
 
 
         private void FormYazarlar_Load(object sender, EventArgs e)
         {
 
-      
-            
+
+            CheckBoxes.Clear();
 
             i = 1;
 
@@ -48,12 +49,13 @@ namespace KutuphaneOtomasyonu
                     ListViewItem lvItem = new ListViewItem(i.ToString());
                     lvItem.SubItems.Add(item.Ad);
                     lvItem.SubItems.Add(item.Soyad);
-                    lvItem.SubItems.Add(item.DogumTarihi.ToString());
+                    lvItem.SubItems.Add(item.DogumTarihi.Day + "/" + item.DogumTarihi.Month + "/"+ item.DogumTarihi.Year);
 
                 foreach (var item1 in item.YazarTurler)
                 {
                     lvItem.SubItems.Add(item1.TurAdi);
                 }
+
                 lvYazarlar.Items.Add(lvItem);
                     i++;
                
@@ -69,7 +71,7 @@ namespace KutuphaneOtomasyonu
             CheckBoxes.Add(Tarih);
             CheckBoxes.Add(Mizah);
             CheckBoxes.Add(Psikoloji);
-            CheckBoxes.Add(Feksefe);
+            CheckBoxes.Add(Felsefe);
             CheckBoxes.Add(Sanat);
 
         }
@@ -88,7 +90,7 @@ namespace KutuphaneOtomasyonu
             
             yazar.Ad = txtYazarAd.Text;
             yazar.Soyad = txtYazarSoyad.Text;
-            yazar.DogumTarihi = dtYazarDogumTarihi.Value;
+            yazar.DogumTarihi = dtYazarDogumTarihi.Value.Date;
 
 
             
@@ -115,12 +117,20 @@ namespace KutuphaneOtomasyonu
 
                         foreach (var item in db.Turler.ToList())
                         {
-                            if (item.TurAdi != tur.TurAdi)
+
+                            if (item.TurAdi == item1.Text)
                             {
-                                tur.TurAdi = item1.Text;
-                                db.Turler.Add(tur);
+                                control = true;
                                 break;
                             }
+
+                        }
+
+                         if (control == false)
+                        {
+                            tur.TurAdi = item1.Text;
+                            db.Turler.Add(tur);
+                           
                         }
 
                     }
@@ -133,14 +143,14 @@ namespace KutuphaneOtomasyonu
                         if(item2.TurAdi == item1.Text)
                         {
                             yazar.YazarTurler.Add(item2);
-                            tur.TurYazarlar.Add(yazar);
-                            break;
-
+                            
                         }
                        
                     }
                   
-                }      
+                }
+
+                control = false;
 
             }
 
@@ -160,7 +170,7 @@ namespace KutuphaneOtomasyonu
 
                 lvItem.SubItems.Add(item.Ad);
                 lvItem.SubItems.Add(item.Soyad);
-                lvItem.SubItems.Add(item.DogumTarihi.ToString());
+                lvItem.SubItems.Add(item.DogumTarihi.Day + "/" + item.DogumTarihi.Month + "/" + item.DogumTarihi.Year);
                 foreach (var item1 in item.YazarTurler)
                 {
                     lvItem.SubItems.Add(item1.TurAdi);
@@ -171,7 +181,17 @@ namespace KutuphaneOtomasyonu
             }
 
 
-           
+            txtYazarAd.Text = string.Empty;
+            txtYazarSoyad.Text = string.Empty;
+            
+
+            Bilim.Checked = false;
+            Edebiyat.Checked = false;
+            Tarih.Checked = false;
+            Mizah.Checked = false;
+            Psikoloji.Checked = false;
+            Felsefe.Checked = false;
+            Sanat.Checked = false;
 
 
 

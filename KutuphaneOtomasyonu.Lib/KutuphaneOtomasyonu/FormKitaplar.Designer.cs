@@ -289,13 +289,13 @@
             // 
             this.Tur.Text = "Tür";
             this.Tur.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Tur.Width = 116;
+            this.Tur.Width = 92;
             // 
             // Yayin
             // 
             this.Yayin.Text = "Yayın";
             this.Yayin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Yayin.Width = 284;
+            this.Yayin.Width = 232;
             // 
             // panel1
             // 

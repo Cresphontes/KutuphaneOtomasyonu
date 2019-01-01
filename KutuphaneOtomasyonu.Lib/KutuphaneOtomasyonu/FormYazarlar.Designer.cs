@@ -34,7 +34,7 @@
             this.btnYazarGuncelle = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Sanat = new System.Windows.Forms.CheckBox();
-            this.Feksefe = new System.Windows.Forms.CheckBox();
+            this.Felsefe = new System.Windows.Forms.CheckBox();
             this.Psikoloji = new System.Windows.Forms.CheckBox();
             this.Mizah = new System.Windows.Forms.CheckBox();
             this.Tarih = new System.Windows.Forms.CheckBox();
@@ -51,11 +51,11 @@
             this.Soyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DogumTarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tur1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Tur2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kaydetYazar = new System.Windows.Forms.ToolStripMenuItem();
             this.AcYazar = new System.Windows.Forms.ToolStripMenuItem();
-            this.Tur2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -103,7 +103,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.Sanat);
-            this.groupBox1.Controls.Add(this.Feksefe);
+            this.groupBox1.Controls.Add(this.Felsefe);
             this.groupBox1.Controls.Add(this.Psikoloji);
             this.groupBox1.Controls.Add(this.Mizah);
             this.groupBox1.Controls.Add(this.Tarih);
@@ -127,15 +127,15 @@
             this.Sanat.Text = "Sanat";
             this.Sanat.UseVisualStyleBackColor = true;
             // 
-            // Feksefe
+            // Felsefe
             // 
-            this.Feksefe.AutoSize = true;
-            this.Feksefe.Location = new System.Drawing.Point(521, 43);
-            this.Feksefe.Name = "Feksefe";
-            this.Feksefe.Size = new System.Drawing.Size(81, 26);
-            this.Feksefe.TabIndex = 5;
-            this.Feksefe.Text = "Felsefe";
-            this.Feksefe.UseVisualStyleBackColor = true;
+            this.Felsefe.AutoSize = true;
+            this.Felsefe.Location = new System.Drawing.Point(521, 43);
+            this.Felsefe.Name = "Felsefe";
+            this.Felsefe.Size = new System.Drawing.Size(81, 26);
+            this.Felsefe.TabIndex = 5;
+            this.Felsefe.Text = "Felsefe";
+            this.Felsefe.UseVisualStyleBackColor = true;
             // 
             // Psikoloji
             // 
@@ -236,7 +236,6 @@
             // 
             // lvYazarlar
             // 
-            this.lvYazarlar.CheckBoxes = true;
             this.lvYazarlar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.Ad,
@@ -280,6 +279,12 @@
             this.Tur1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Tur1.Width = 155;
             // 
+            // Tur2
+            // 
+            this.Tur2.Text = "Tür 2";
+            this.Tur2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Tur2.Width = 92;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lblYazar);
@@ -322,12 +327,6 @@
             this.AcYazar.Size = new System.Drawing.Size(33, 20);
             this.AcYazar.Text = "Aç";
             // 
-            // Tur2
-            // 
-            this.Tur2.Text = "Tür 2";
-            this.Tur2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Tur2.Width = 92;
-            // 
             // FormYazarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,7 +357,7 @@
         private System.Windows.Forms.Button btnYazarGuncelle;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox Sanat;
-        private System.Windows.Forms.CheckBox Feksefe;
+        private System.Windows.Forms.CheckBox Felsefe;
         private System.Windows.Forms.CheckBox Psikoloji;
         private System.Windows.Forms.CheckBox Mizah;
         private System.Windows.Forms.CheckBox Tarih;

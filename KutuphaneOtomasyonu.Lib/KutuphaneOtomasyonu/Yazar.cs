@@ -27,10 +27,13 @@ namespace KutuphaneOtomasyonu.Lib
 
         public virtual List<Tur> YazarTurler { get; set; }
         public virtual List<Kitap> YazarKitaplar { get; set; }
-       
 
 
 
+        public override string ToString()
+        {
+            return $"{this.Ad} {this.Soyad} ";
+        }
 
     }
 }

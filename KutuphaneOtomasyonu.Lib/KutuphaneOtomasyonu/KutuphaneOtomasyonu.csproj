@@ -97,29 +97,13 @@
     <Compile Include="Insan.cs" />
     <Compile Include="Kayit.cs" />
     <Compile Include="Kitap.cs" />
-    <Compile Include="Migrations\201812302119009_s3.cs" />
-    <Compile Include="Migrations\201812302119009_s3.Designer.cs">
-      <DependentUpon>201812302119009_s3.cs</DependentUpon>
+    <Compile Include="Migrations\201901012109327_dasd.cs" />
+    <Compile Include="Migrations\201901012109327_dasd.Designer.cs">
+      <DependentUpon>201901012109327_dasd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812311329018_b2.cs" />
-    <Compile Include="Migrations\201812311329018_b2.Designer.cs">
-      <DependentUpon>201812311329018_b2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812311429585_b3.cs" />
-    <Compile Include="Migrations\201812311429585_b3.Designer.cs">
-      <DependentUpon>201812311429585_b3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812311459414_b4.cs" />
-    <Compile Include="Migrations\201812311459414_b4.Designer.cs">
-      <DependentUpon>201812311459414_b4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812311505395_b5.cs" />
-    <Compile Include="Migrations\201812311505395_b5.Designer.cs">
-      <DependentUpon>201812311505395_b5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812311522586_b6.cs" />
-    <Compile Include="Migrations\201812311522586_b6.Designer.cs">
-      <DependentUpon>201812311522586_b6.cs</DependentUpon>
+    <Compile Include="Migrations\201901012121483_dff.cs" />
+    <Compile Include="Migrations\201901012121483_dff.Designer.cs">
+      <DependentUpon>201901012121483_dff.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -142,23 +126,11 @@
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812302119009_s3.resx">
-      <DependentUpon>201812302119009_s3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901012109327_dasd.resx">
+      <DependentUpon>201901012109327_dasd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311329018_b2.resx">
-      <DependentUpon>201812311329018_b2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311429585_b3.resx">
-      <DependentUpon>201812311429585_b3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311459414_b4.resx">
-      <DependentUpon>201812311459414_b4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311505395_b5.resx">
-      <DependentUpon>201812311505395_b5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812311522586_b6.resx">
-      <DependentUpon>201812311522586_b6.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901012121483_dff.resx">
+      <DependentUpon>201901012121483_dff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

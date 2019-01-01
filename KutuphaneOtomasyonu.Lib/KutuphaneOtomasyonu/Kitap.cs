@@ -16,6 +16,7 @@ namespace KutuphaneOtomasyonu.Lib
         public int KitapId { get; set; }
         public string KitapAd { get; set; }
         public string Yayin { get; set; }
+        public string KitapTur { get; set; }
 
         public int YazarId { get; set; }
         [ForeignKey("YazarId")]
