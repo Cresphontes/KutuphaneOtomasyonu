@@ -58,9 +58,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\UyeBusiness.cs" />
-    <Compile Include="Business\YazarBusiness.cs" />
-    <Compile Include="Data\Context.cs" />
     <Compile Include="FormKiralama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,26 +88,9 @@
     <Compile Include="Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\ExportImport.cs" />
-    <Compile Include="IAtamaKitapUye.cs" />
-    <Compile Include="IAtamaKitapYazar.cs" />
-    <Compile Include="Insan.cs" />
-    <Compile Include="Kayit.cs" />
-    <Compile Include="Kitap.cs" />
-    <Compile Include="Migrations\201901012109327_dasd.cs" />
-    <Compile Include="Migrations\201901012109327_dasd.Designer.cs">
-      <DependentUpon>201901012109327_dasd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901012121483_dff.cs" />
-    <Compile Include="Migrations\201901012121483_dff.Designer.cs">
-      <DependentUpon>201901012121483_dff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Helpers\FormHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tur.cs" />
-    <Compile Include="Uye.cs" />
-    <Compile Include="Yazar.cs" />
     <EmbeddedResource Include="FormKiralama.resx">
       <DependentUpon>FormKiralama.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,12 +105,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901012109327_dasd.resx">
-      <DependentUpon>201901012109327_dasd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901012121483_dff.resx">
-      <DependentUpon>201901012121483_dff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,6 +128,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KutuphaneOtomasyonu.BLL\KutuphaneOtomasyonu.BLL.csproj">
+      <Project>{245ee4e0-f98d-48b5-af9d-c984baa66f38}</Project>
+      <Name>KutuphaneOtomasyonu.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KutuphaneOtomasyonu.Models\KutuphaneOtomasyonu.Models.csproj">
+      <Project>{641c9037-508f-4861-bb89-7fbfdebbd282}</Project>
+      <Name>KutuphaneOtomasyonu.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

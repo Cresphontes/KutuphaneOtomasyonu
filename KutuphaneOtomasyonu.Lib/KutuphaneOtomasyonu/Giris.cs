@@ -1,5 +1,4 @@
-﻿using KutuphaneOtomasyonu.Lib.Data;
-using KutuphaneOtomasyonu.Lib.Helper;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +24,7 @@ namespace KutuphaneOtomasyonu
         FormKiralama frmKiralama;
         FormYazarlar frmYazarlar;
 
-        Context db = new Context();
+
 
         private void btnKitapKayit_Click(object sender, EventArgs e)
         {

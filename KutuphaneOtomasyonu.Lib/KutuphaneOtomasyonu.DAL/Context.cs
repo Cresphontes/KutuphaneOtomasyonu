@@ -1,13 +1,14 @@
-﻿using KutuphaneOtomasyonu.Lib;
+﻿
+using KutuphaneOtomasyonu.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace KutuphaneOtomasyonu.Lib.Data
+
+namespace KutuphaneOtomasyonu.DAL
 {
     public class Context:DbContext
     {

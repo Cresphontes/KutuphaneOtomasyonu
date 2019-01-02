@@ -217,7 +217,7 @@ namespace KutuphaneOtomasyonu
 
 
  
-            if (lvKitaplar.) return;
+            if (lvKitaplar.SelectedItems.Count == 0) return;
         
             ListViewItem lvItem = lvKitaplar.SelectedItems[0];
 
