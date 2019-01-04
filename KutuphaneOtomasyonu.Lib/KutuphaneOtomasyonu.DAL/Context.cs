@@ -1,5 +1,6 @@
 ﻿
 using KutuphaneOtomasyonu.Models;
+using KutuphaneOtomasyonu.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -19,7 +20,7 @@ namespace KutuphaneOtomasyonu.DAL
 
         public DbSet<Kitap> Kitaplar { get; set; } 
         public DbSet<Yazar> Yazarlar { get; set; }
-
+        public DbSet<Yazar_Tur> Yazar_Turler { get; set; }
         public DbSet<Tur> Turler { get; set; }
         public DbSet<Uye> Uyeler { get; set; }
         

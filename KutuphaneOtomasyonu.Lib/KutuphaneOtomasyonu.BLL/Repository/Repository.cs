@@ -1,4 +1,5 @@
 ﻿using KutuphaneOtomasyonu.Models;
+using KutuphaneOtomasyonu.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,12 @@ namespace KutuphaneOtomasyonu.BLL.Repository
     }
 
     public class TurRepo : RepositoryBase<Tur, int>
+    {
+
+
+    }
+
+    public class Yazar_Tur_Repo : RepositoryBase<Yazar_Tur, int>
     {
 
 

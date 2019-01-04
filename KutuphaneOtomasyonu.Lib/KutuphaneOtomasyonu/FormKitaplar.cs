@@ -1,17 +1,10 @@
-﻿using KutuphaneOtomasyonu.Lib;
-using KutuphaneOtomasyonu.Lib.Business;
-using KutuphaneOtomasyonu.Lib.Data;
-using KutuphaneOtomasyonu.Lib.Helper;
+﻿
+using KutuphaneOtomasyonu.BLL.Repository;
+using KutuphaneOtomasyonu.Helpers;
+using KutuphaneOtomasyonu.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.ListView;
 
 namespace KutuphaneOtomasyonu
 {
@@ -31,15 +24,17 @@ namespace KutuphaneOtomasyonu
         private void btnKitapKaydet_Click(object sender, EventArgs e)
         {
 
-            i = 1;
+            KitapRepo db = new KitapRepo();
+            YazarRepo dbYazar = new YazarRepo();
 
-            Context db = new Context();
 
             Kitap kitap = new Kitap();
             Yazar yazar = new Yazar();
 
-            var yazarlar = db.Yazarlar.ToList();
-    
+            var yazarlar = dbYazar.GetAll();
+            var kitaplar = db.GetAll();
+
+
             kitap.KitapAd = txtKitapAd.Text;
             kitap.Yayin = txtYayin.Text;
 
@@ -62,45 +57,12 @@ namespace KutuphaneOtomasyonu
             }
 
 
-            db.Kitaplar.Add(kitap);
+            db.Insert(kitap);
             yazar.YazarKitaplar.Add(kitap);
-            
-            db.SaveChanges();
 
-            lvKitaplar.Items.Clear();
+            db.Update();
 
-         
-
-            var Kitaplar = db.Kitaplar.ToList();
-
-            foreach (var item in Kitaplar)
-            {
-                ListViewItem lvItem = new ListViewItem(i.ToString());
-
-                lvItem.SubItems.Add(item.KitapAd);
-                lvItem.SubItems.Add(item.Yazar.Ad + " " + item.Yazar.Soyad);
-                lvItem.SubItems.Add(item.KitapTur);
-                lvItem.SubItems.Add(item.Yayin);
-
-                lvKitaplar.Items.Add(lvItem);
-                i++;
-            }
-
-
-
-            txtKitapAd.Text = string.Empty;
-            txtYayin.Text = string.Empty;
-            cmbYazar.SelectedItem = null;
-            
-
-            Bilim.Checked = false;
-            Edebiyat.Checked = false;
-            Tarih.Checked = false;
-            Mizah.Checked = false;
-            Psikoloji.Checked = false;
-            Felsefe.Checked = false;
-            Sanat.Checked = false;
-
+            KitaplariGetir();
 
 
         }
@@ -112,31 +74,7 @@ namespace KutuphaneOtomasyonu
 
             RadioButtons.Clear();
 
-            i = 1;
-            
-
-            Context db = new Context();
-
-            lvKitaplar.Items.Clear();
-
-            var Kitaplar = db.Kitaplar.ToList();
-
-            foreach (var item in Kitaplar)
-            {
-                ListViewItem lvItem = new ListViewItem(i.ToString());
-
-
-                lvItem.SubItems.Add(item.KitapAd);
-                lvItem.SubItems.Add(item.Yazar.Ad + " " +item.Yazar.Soyad);
-                lvItem.SubItems.Add(item.KitapTur);
-                lvItem.SubItems.Add(item.Yayin);
-
-                lvKitaplar.Items.Add(lvItem);
-
-                i++;
-            }
-
-     
+            KitaplariGetir();
 
             RadioButtons.Add(Bilim);
             RadioButtons.Add(Edebiyat);
@@ -149,12 +87,38 @@ namespace KutuphaneOtomasyonu
 
         }
 
+        private void KitaplariGetir()
+        {
+            KitapRepo db = new KitapRepo();
+
+            i = 1;
+
+            var kitaplar = db.GetAll();
+
+            FormHelper.FormTemizle(this);
+
+            foreach (var item in kitaplar)
+            {
+                ListViewItem lvItem = new ListViewItem(i.ToString());
+
+
+                lvItem.SubItems.Add(item.KitapAd);
+                lvItem.SubItems.Add(item.Yazar.Ad + " " + item.Yazar.Soyad);
+                lvItem.SubItems.Add(item.KitapTur);
+                lvItem.SubItems.Add(item.Yayin);
+
+                lvKitaplar.Items.Add(lvItem);
+
+                i++;
+            }
+        }
 
         private void cmbYazar_DropDown(object sender, EventArgs e)
         {
 
-            Context db = new Context();
-          
+            YazarRepo db = new YazarRepo();
+
+            var yazarlar = db.GetAll();
 
             cmbYazar.Items.Clear();
 
@@ -162,7 +126,7 @@ namespace KutuphaneOtomasyonu
             {
                 if (item.Checked)
                 {
-                    foreach (var item1 in db.Yazarlar.ToList())
+                    foreach (var item1 in yazarlar)
                     {
                         foreach (var item2 in item1.YazarTurler)
                         {
@@ -179,38 +143,6 @@ namespace KutuphaneOtomasyonu
             }
         }
 
-        //private void kaydetKitap_Click(object sender, EventArgs e)
-        //{
-        //    ExportImport kaydet = new ExportImport();
-        //    kaydet.Export(context);
-        //}
-
-        //private void acKitap_Click(object sender, EventArgs e)
-        //{
-        //    ExportImport ac = new ExportImport();
-
-        //    contextAc = ac.Import();
-
-        //    lvKitaplar.Items.Clear();
-            
-        //    context.Kitaplar.AddRange(contextAc.Kitaplar);
-
-        //    i = 1;
-
-        //    foreach (var item in contextAc.Kitaplar)
-        //    {
-        //        ListViewItem lvItem = new ListViewItem(i.ToString());
-
-        //        lvItem.SubItems.Add(item.KitapAd);
-        //        lvItem.SubItems.Add(item.Yazar.ToString());
-        //        lvItem.SubItems.Add(item.Tur.ToString());
-        //        lvItem.SubItems.Add(item.Yayin);
-
-        //        lvKitaplar.Items.Add(lvItem);
-
-        //        i++;
-        //    }
-        //}
 
         private void lvKitaplar_SelectedIndexChanged(object sender, EventArgs e)
         {

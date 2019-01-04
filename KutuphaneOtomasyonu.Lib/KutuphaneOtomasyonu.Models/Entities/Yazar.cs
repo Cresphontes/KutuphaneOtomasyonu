@@ -1,4 +1,5 @@
 ﻿
+using KutuphaneOtomasyonu.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -17,15 +18,14 @@ namespace KutuphaneOtomasyonu.Models
 
         public Yazar()
         {
-            YazarKitaplar = new List<Kitap>();
-            YazarTurler = new List<Tur>();
+            YazarTurler = new List<Yazar_Tur>();
         }
 
         [Key]
         public int YazarId { get; set; }
 
 
-        public virtual List<Tur> YazarTurler { get; set; }
+        public virtual List<Yazar_Tur> YazarTurler { get; set; }
         public virtual List<Kitap> YazarKitaplar { get; set; }
 
 

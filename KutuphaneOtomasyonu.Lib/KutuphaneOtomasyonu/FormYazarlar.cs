@@ -2,6 +2,7 @@
 using KutuphaneOtomasyonu.BLL.Repository;
 using KutuphaneOtomasyonu.Helpers;
 using KutuphaneOtomasyonu.Models;
+using KutuphaneOtomasyonu.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,11 +53,14 @@ namespace KutuphaneOtomasyonu
 
             var dbYazar = new YazarRepo();
             var dbTur = new TurRepo();
+            var db_Yazar_Tur = new Yazar_Tur_Repo();
 
             var yazarlar = dbYazar.GetAll();
             var turler = dbTur.GetAll();
+            var yazar_turler = db_Yazar_Tur.GetAll();
 
             Yazar yazar = new Yazar();
+            Yazar_Tur yazar_tur = new Yazar_Tur();
             
             yazar.Ad = txtYazarAd.Text;
             yazar.Soyad = txtYazarSoyad.Text;
@@ -74,7 +78,8 @@ namespace KutuphaneOtomasyonu
                     {
                         tur.TurAdi = item1.Text;
                         dbTur.Insert(tur);
-
+                      
+                        
                     }
                     else
                     {
@@ -106,8 +111,8 @@ namespace KutuphaneOtomasyonu
                     {
                         if(item2.TurAdi == item1.Text)
                         {
-                            yazar.YazarTurler.Add(item2);
-                            
+                            yazar_tur.YazarId = item2.TurId;
+
                         }
                        
                     }
