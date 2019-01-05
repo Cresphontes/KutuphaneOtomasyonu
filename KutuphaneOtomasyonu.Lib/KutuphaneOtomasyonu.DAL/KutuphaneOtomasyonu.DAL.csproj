@@ -49,6 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="Migrations\201901052220447_oo.cs" />
+    <Compile Include="Migrations\201901052220447_oo.Designer.cs">
+      <DependentUpon>201901052220447_oo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +65,11 @@
       <Project>{641c9037-508f-4861-bb89-7fbfdebbd282}</Project>
       <Name>KutuphaneOtomasyonu.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901052220447_oo.resx">
+      <DependentUpon>201901052220447_oo.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

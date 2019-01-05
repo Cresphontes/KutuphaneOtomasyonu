@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace KutuphaneOtomasyonu.Models
+namespace KutuphaneOtomasyonu.Models.Entities
 {
     [Table("Kitaplar")]
     public class Kitap

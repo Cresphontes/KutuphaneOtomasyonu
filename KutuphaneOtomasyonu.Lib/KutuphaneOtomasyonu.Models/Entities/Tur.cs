@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace KutuphaneOtomasyonu.Models
+namespace KutuphaneOtomasyonu.Models.Entities
 {
     [Table("Turler")]
     public class Tur
     {
 
-        public Tur()
-        {
-            YazarTurler = new List<Yazar_Tur>();
-        }
 
         [Key]
         public int TurId { get; set; }
@@ -20,6 +16,6 @@ namespace KutuphaneOtomasyonu.Models
         public string TurAdi { get; set; }
 
 
-        public virtual List<Yazar_Tur> YazarTurler { get; set; }
+        public virtual ICollection<Yazar> Yazarlar { get; set; } = new HashSet<Yazar>();
     }
 }

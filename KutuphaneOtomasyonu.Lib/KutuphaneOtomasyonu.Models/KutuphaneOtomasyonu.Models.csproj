@@ -54,7 +54,6 @@
     <Compile Include="Entities\Tur.cs" />
     <Compile Include="Entities\Uye.cs" />
     <Compile Include="Entities\Yazar.cs" />
-    <Compile Include="Entities\Yazar_Tur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

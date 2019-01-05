@@ -1,7 +1,8 @@
 ﻿
 using KutuphaneOtomasyonu.BLL.Repository;
 using KutuphaneOtomasyonu.Helpers;
-using KutuphaneOtomasyonu.Models;
+
+using KutuphaneOtomasyonu.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -128,7 +129,7 @@ namespace KutuphaneOtomasyonu
                 {
                     foreach (var item1 in yazarlar)
                     {
-                        foreach (var item2 in item1.YazarTurler)
+                        foreach (var item2 in item1.Turler)
                         {
                             if (item2.TurAdi == item.Text)
                             {

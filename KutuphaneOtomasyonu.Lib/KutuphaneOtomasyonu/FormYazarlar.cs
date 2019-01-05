@@ -1,7 +1,6 @@
 ﻿
 using KutuphaneOtomasyonu.BLL.Repository;
 using KutuphaneOtomasyonu.Helpers;
-using KutuphaneOtomasyonu.Models;
 using KutuphaneOtomasyonu.Models.Entities;
 using System;
 using System.Collections.Generic;
@@ -53,19 +52,17 @@ namespace KutuphaneOtomasyonu
 
             var dbYazar = new YazarRepo();
             var dbTur = new TurRepo();
-            var db_Yazar_Tur = new Yazar_Tur_Repo();
-
-            var yazarlar = dbYazar.GetAll();
-            var turler = dbTur.GetAll();
-            var yazar_turler = db_Yazar_Tur.GetAll();
 
             Yazar yazar = new Yazar();
-            Yazar_Tur yazar_tur = new Yazar_Tur();
+
+         
+           
             
             yazar.Ad = txtYazarAd.Text;
             yazar.Soyad = txtYazarSoyad.Text;
             yazar.DogumTarihi = dtYazarDogumTarihi.Value.Date;
 
+           
 
             foreach (var item1 in CheckBoxes)
             {
@@ -74,17 +71,18 @@ namespace KutuphaneOtomasyonu
 
                     Tur tur = new Tur();
                     
-                    if (turler.Count() == 0)
+                    if (dbTur.GetAll().Count() == 0)
                     {
                         tur.TurAdi = item1.Text;
                         dbTur.Insert(tur);
+                        dbTur.Update();
                       
                         
                     }
                     else
                     {
 
-                        foreach (var item in turler)
+                        foreach (var item in dbTur.GetAll())
                         {
 
                             if (item.TurAdi == item1.Text)
@@ -99,6 +97,7 @@ namespace KutuphaneOtomasyonu
                         {
                             tur.TurAdi = item1.Text;
                             dbTur.Insert(tur);
+                            dbTur.Update();
 
 
                         }
@@ -107,12 +106,13 @@ namespace KutuphaneOtomasyonu
   
                     dbTur.Update();
 
-                    foreach (var item2 in turler)
+                    foreach (var item2 in dbTur.GetAll())
                     {
                         if(item2.TurAdi == item1.Text)
                         {
-                            yazar_tur.YazarId = item2.TurId;
-
+                            yazar.Turler.Add(item2);
+                            item2.Yazarlar.Add(yazar);
+                            dbYazar.Update();
                         }
                        
                     }
@@ -123,8 +123,7 @@ namespace KutuphaneOtomasyonu
 
             }
 
-            dbYazar.Insert(yazar);
-
+            
             YazarlariGetir();
 
         }
@@ -133,12 +132,11 @@ namespace KutuphaneOtomasyonu
         private void YazarlariGetir()
         {
             YazarRepo db = new YazarRepo();
-
-            i = 1;
-
             var yazarlar = db.GetAll();
 
+            i = 1;
             FormHelper.FormTemizle(this);
+            lvYazarlar.Items.Clear();
 
             foreach (var item in yazarlar)
             {
@@ -147,7 +145,7 @@ namespace KutuphaneOtomasyonu
                 lvItem.SubItems.Add(item.Soyad);
                 lvItem.SubItems.Add(item.DogumTarihi.Day + "/" + item.DogumTarihi.Month + "/" + item.DogumTarihi.Year);
 
-                foreach (var item1 in item.YazarTurler)
+                foreach (var item1 in item.Turler)
                 {
                     lvItem.SubItems.Add(item1.TurAdi);
                 }

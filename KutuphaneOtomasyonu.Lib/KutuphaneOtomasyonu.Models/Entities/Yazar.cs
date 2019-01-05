@@ -9,23 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace KutuphaneOtomasyonu.Models
+namespace KutuphaneOtomasyonu.Models.Entities
 {
 
     [Table("Yazarlar")]
     public class Yazar:Insan
     {
 
-        public Yazar()
-        {
-            YazarTurler = new List<Yazar_Tur>();
-        }
 
         [Key]
         public int YazarId { get; set; }
 
 
-        public virtual List<Yazar_Tur> YazarTurler { get; set; }
+        public virtual ICollection<Tur> Turler { get; set; } = new HashSet<Tur>();
         public virtual List<Kitap> YazarKitaplar { get; set; }
 
 

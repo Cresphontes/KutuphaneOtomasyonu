@@ -20,14 +20,23 @@ namespace KutuphaneOtomasyonu.DAL
 
         public DbSet<Kitap> Kitaplar { get; set; } 
         public DbSet<Yazar> Yazarlar { get; set; }
-        public DbSet<Yazar_Tur> Yazar_Turler { get; set; }
         public DbSet<Tur> Turler { get; set; }
         public DbSet<Uye> Uyeler { get; set; }
-        
         public DbSet<Kayit> Kayitlar { get; set; }
-       
 
-        
-        
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Yazar>()
+                .HasMany<Tur>(s => s.Turler)
+                .WithMany(c => c.Yazarlar)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("YazarId");
+                    cs.MapRightKey("TurId");
+                    cs.ToTable("Yazar_Turler");
+                });
+        }
+
+
     }
 }

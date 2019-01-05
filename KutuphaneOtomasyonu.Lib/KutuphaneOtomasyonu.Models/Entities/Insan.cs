@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KutuphaneOtomasyonu.Models
+namespace KutuphaneOtomasyonu.Models.Entities
 {
     public abstract class Insan
     {
