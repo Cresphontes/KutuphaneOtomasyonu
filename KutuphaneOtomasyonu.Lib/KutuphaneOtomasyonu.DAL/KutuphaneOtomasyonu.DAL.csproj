@@ -49,9 +49,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
-    <Compile Include="Migrations\201901052220447_oo.cs" />
-    <Compile Include="Migrations\201901052220447_oo.Designer.cs">
-      <DependentUpon>201901052220447_oo.cs</DependentUpon>
+    <Compile Include="Migrations\201901061805075_a.cs" />
+    <Compile Include="Migrations\201901061805075_a.Designer.cs">
+      <DependentUpon>201901061805075_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901061814190_a3.cs" />
+    <Compile Include="Migrations\201901061814190_a3.Designer.cs">
+      <DependentUpon>201901061814190_a3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901061826469_a4.cs" />
+    <Compile Include="Migrations\201901061826469_a4.Designer.cs">
+      <DependentUpon>201901061826469_a4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901061828276_a5.cs" />
+    <Compile Include="Migrations\201901061828276_a5.Designer.cs">
+      <DependentUpon>201901061828276_a5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901061830385_a6.cs" />
+    <Compile Include="Migrations\201901061830385_a6.Designer.cs">
+      <DependentUpon>201901061830385_a6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901061958056_a7.cs" />
+    <Compile Include="Migrations\201901061958056_a7.Designer.cs">
+      <DependentUpon>201901061958056_a7.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,8 +87,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901052220447_oo.resx">
-      <DependentUpon>201901052220447_oo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901061805075_a.resx">
+      <DependentUpon>201901061805075_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901061814190_a3.resx">
+      <DependentUpon>201901061814190_a3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901061826469_a4.resx">
+      <DependentUpon>201901061826469_a4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901061828276_a5.resx">
+      <DependentUpon>201901061828276_a5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901061830385_a6.resx">
+      <DependentUpon>201901061830385_a6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901061958056_a7.resx">
+      <DependentUpon>201901061958056_a7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

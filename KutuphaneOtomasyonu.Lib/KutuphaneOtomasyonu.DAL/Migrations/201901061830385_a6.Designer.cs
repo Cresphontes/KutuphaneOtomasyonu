@@ -7,13 +7,13 @@ namespace KutuphaneOtomasyonu.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class oo : IMigrationMetadata
+    public sealed partial class a6 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(oo));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(a6));
         
         string IMigrationMetadata.Id
         {
-            get { return "201901052220447_oo"; }
+            get { return "201901061830385_a6"; }
         }
         
         string IMigrationMetadata.Source

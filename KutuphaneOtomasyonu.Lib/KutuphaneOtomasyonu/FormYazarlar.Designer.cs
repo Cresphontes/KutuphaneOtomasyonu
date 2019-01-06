@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormYazarlar));
             this.lblYazarSoyad = new System.Windows.Forms.Label();
             this.txtYazarSoyad = new System.Windows.Forms.TextBox();
             this.lblYazar = new System.Windows.Forms.Label();
@@ -53,52 +54,33 @@
             this.Tur1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tur2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.kaydetYazar = new System.Windows.Forms.ToolStripMenuItem();
-            this.AcYazar = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblYazarSoyad
             // 
-            this.lblYazarSoyad.AutoSize = true;
-            this.lblYazarSoyad.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYazarSoyad.Location = new System.Drawing.Point(537, 102);
+            resources.ApplyResources(this.lblYazarSoyad, "lblYazarSoyad");
             this.lblYazarSoyad.Name = "lblYazarSoyad";
-            this.lblYazarSoyad.Size = new System.Drawing.Size(54, 22);
-            this.lblYazarSoyad.TabIndex = 24;
-            this.lblYazarSoyad.Text = "Soyad";
             // 
             // txtYazarSoyad
             // 
-            this.txtYazarSoyad.Location = new System.Drawing.Point(490, 127);
+            resources.ApplyResources(this.txtYazarSoyad, "txtYazarSoyad");
             this.txtYazarSoyad.Name = "txtYazarSoyad";
-            this.txtYazarSoyad.Size = new System.Drawing.Size(149, 20);
-            this.txtYazarSoyad.TabIndex = 23;
             // 
             // lblYazar
             // 
-            this.lblYazar.AutoSize = true;
-            this.lblYazar.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYazar.Location = new System.Drawing.Point(378, 19);
+            resources.ApplyResources(this.lblYazar, "lblYazar");
             this.lblYazar.Name = "lblYazar";
-            this.lblYazar.Size = new System.Drawing.Size(156, 35);
-            this.lblYazar.TabIndex = 25;
-            this.lblYazar.Text = "Yazar Kayıt";
             // 
             // btnYazarGuncelle
             // 
             this.btnYazarGuncelle.AutoEllipsis = true;
             this.btnYazarGuncelle.BackColor = System.Drawing.Color.Gold;
-            this.btnYazarGuncelle.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYazarGuncelle.Location = new System.Drawing.Point(490, 355);
+            resources.ApplyResources(this.btnYazarGuncelle, "btnYazarGuncelle");
             this.btnYazarGuncelle.Name = "btnYazarGuncelle";
-            this.btnYazarGuncelle.Size = new System.Drawing.Size(101, 43);
-            this.btnYazarGuncelle.TabIndex = 22;
-            this.btnYazarGuncelle.Text = "Güncelle";
             this.btnYazarGuncelle.UseVisualStyleBackColor = false;
+            this.btnYazarGuncelle.Click += new System.EventHandler(this.btnYazarGuncelle_Click);
             // 
             // groupBox1
             // 
@@ -109,130 +91,80 @@
             this.groupBox1.Controls.Add(this.Tarih);
             this.groupBox1.Controls.Add(this.Edebiyat);
             this.groupBox1.Controls.Add(this.Bilim);
-            this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(115, 241);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(741, 86);
-            this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Yazar Kitap Türleri";
             // 
             // Sanat
             // 
-            this.Sanat.AutoSize = true;
-            this.Sanat.Location = new System.Drawing.Point(608, 43);
+            resources.ApplyResources(this.Sanat, "Sanat");
             this.Sanat.Name = "Sanat";
-            this.Sanat.Size = new System.Drawing.Size(70, 26);
-            this.Sanat.TabIndex = 6;
-            this.Sanat.Text = "Sanat";
             this.Sanat.UseVisualStyleBackColor = true;
             // 
             // Felsefe
             // 
-            this.Felsefe.AutoSize = true;
-            this.Felsefe.Location = new System.Drawing.Point(521, 43);
+            resources.ApplyResources(this.Felsefe, "Felsefe");
             this.Felsefe.Name = "Felsefe";
-            this.Felsefe.Size = new System.Drawing.Size(81, 26);
-            this.Felsefe.TabIndex = 5;
-            this.Felsefe.Text = "Felsefe";
             this.Felsefe.UseVisualStyleBackColor = true;
             // 
             // Psikoloji
             // 
-            this.Psikoloji.AutoSize = true;
-            this.Psikoloji.Location = new System.Drawing.Point(421, 43);
+            resources.ApplyResources(this.Psikoloji, "Psikoloji");
             this.Psikoloji.Name = "Psikoloji";
-            this.Psikoloji.Size = new System.Drawing.Size(94, 26);
-            this.Psikoloji.TabIndex = 4;
-            this.Psikoloji.Text = "Psikoloji";
             this.Psikoloji.UseVisualStyleBackColor = true;
             // 
             // Mizah
             // 
-            this.Mizah.AutoSize = true;
-            this.Mizah.Location = new System.Drawing.Point(342, 43);
+            resources.ApplyResources(this.Mizah, "Mizah");
             this.Mizah.Name = "Mizah";
-            this.Mizah.Size = new System.Drawing.Size(73, 26);
-            this.Mizah.TabIndex = 3;
-            this.Mizah.Text = "Mizah";
             this.Mizah.UseVisualStyleBackColor = true;
             // 
             // Tarih
             // 
-            this.Tarih.AutoSize = true;
-            this.Tarih.Location = new System.Drawing.Point(269, 43);
+            resources.ApplyResources(this.Tarih, "Tarih");
             this.Tarih.Name = "Tarih";
-            this.Tarih.Size = new System.Drawing.Size(67, 26);
-            this.Tarih.TabIndex = 2;
-            this.Tarih.Text = "Tarih";
             this.Tarih.UseVisualStyleBackColor = true;
             // 
             // Edebiyat
             // 
-            this.Edebiyat.AutoSize = true;
-            this.Edebiyat.Location = new System.Drawing.Point(170, 43);
+            resources.ApplyResources(this.Edebiyat, "Edebiyat");
             this.Edebiyat.Name = "Edebiyat";
-            this.Edebiyat.Size = new System.Drawing.Size(93, 26);
-            this.Edebiyat.TabIndex = 1;
-            this.Edebiyat.Text = "Edebiyat";
             this.Edebiyat.UseVisualStyleBackColor = true;
             // 
             // Bilim
             // 
-            this.Bilim.AutoSize = true;
-            this.Bilim.Location = new System.Drawing.Point(97, 43);
+            resources.ApplyResources(this.Bilim, "Bilim");
             this.Bilim.Name = "Bilim";
-            this.Bilim.Size = new System.Drawing.Size(67, 26);
-            this.Bilim.TabIndex = 0;
-            this.Bilim.Text = "Bilim";
             this.Bilim.UseVisualStyleBackColor = true;
             // 
             // btnYazarKaydet
             // 
             this.btnYazarKaydet.AutoEllipsis = true;
             this.btnYazarKaydet.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnYazarKaydet.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYazarKaydet.Location = new System.Drawing.Point(352, 355);
+            resources.ApplyResources(this.btnYazarKaydet, "btnYazarKaydet");
             this.btnYazarKaydet.Name = "btnYazarKaydet";
-            this.btnYazarKaydet.Size = new System.Drawing.Size(101, 43);
-            this.btnYazarKaydet.TabIndex = 21;
-            this.btnYazarKaydet.Text = "Kaydet";
             this.btnYazarKaydet.UseVisualStyleBackColor = false;
             this.btnYazarKaydet.Click += new System.EventHandler(this.btnYazarKaydet_Click_1);
             // 
             // dtYazarDogumTarihi
             // 
-            this.dtYazarDogumTarihi.Location = new System.Drawing.Point(367, 189);
+            resources.ApplyResources(this.dtYazarDogumTarihi, "dtYazarDogumTarihi");
             this.dtYazarDogumTarihi.Name = "dtYazarDogumTarihi";
-            this.dtYazarDogumTarihi.Size = new System.Drawing.Size(200, 20);
-            this.dtYazarDogumTarihi.TabIndex = 27;
             // 
             // lblYazarAd
             // 
-            this.lblYazarAd.AutoSize = true;
-            this.lblYazarAd.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYazarAd.Location = new System.Drawing.Point(348, 102);
+            resources.ApplyResources(this.lblYazarAd, "lblYazarAd");
             this.lblYazarAd.Name = "lblYazarAd";
-            this.lblYazarAd.Size = new System.Drawing.Size(30, 22);
-            this.lblYazarAd.TabIndex = 14;
-            this.lblYazarAd.Text = "Ad";
             // 
             // lblYazarDogumTarihi
             // 
-            this.lblYazarDogumTarihi.AutoSize = true;
-            this.lblYazarDogumTarihi.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYazarDogumTarihi.Location = new System.Drawing.Point(410, 164);
+            resources.ApplyResources(this.lblYazarDogumTarihi, "lblYazarDogumTarihi");
             this.lblYazarDogumTarihi.Name = "lblYazarDogumTarihi";
-            this.lblYazarDogumTarihi.Size = new System.Drawing.Size(110, 22);
-            this.lblYazarDogumTarihi.TabIndex = 28;
-            this.lblYazarDogumTarihi.Text = "Doğum Tarihi";
             // 
             // txtYazarAd
             // 
-            this.txtYazarAd.Location = new System.Drawing.Point(292, 127);
+            resources.ApplyResources(this.txtYazarAd, "txtYazarAd");
             this.txtYazarAd.Name = "txtYazarAd";
-            this.txtYazarAd.Size = new System.Drawing.Size(149, 20);
-            this.txtYazarAd.TabIndex = 13;
             // 
             // lvYazarlar
             // 
@@ -243,47 +175,36 @@
             this.DogumTarihi,
             this.Tur1,
             this.Tur2});
-            this.lvYazarlar.Location = new System.Drawing.Point(81, 433);
+            this.lvYazarlar.FullRowSelect = true;
+            resources.ApplyResources(this.lvYazarlar, "lvYazarlar");
             this.lvYazarlar.Name = "lvYazarlar";
-            this.lvYazarlar.Size = new System.Drawing.Size(785, 286);
-            this.lvYazarlar.TabIndex = 29;
             this.lvYazarlar.UseCompatibleStateImageBehavior = false;
             this.lvYazarlar.View = System.Windows.Forms.View.Details;
+            this.lvYazarlar.SelectedIndexChanged += new System.EventHandler(this.lvYazarlar_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader1.Width = 24;
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
             // 
             // Ad
             // 
-            this.Ad.Text = "Ad";
-            this.Ad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            resources.ApplyResources(this.Ad, "Ad");
             // 
             // Soyad
             // 
-            this.Soyad.Text = "Soyad";
-            this.Soyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Soyad.Width = 146;
+            resources.ApplyResources(this.Soyad, "Soyad");
             // 
             // DogumTarihi
             // 
-            this.DogumTarihi.Text = "Doğum Tarihi";
-            this.DogumTarihi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DogumTarihi.Width = 201;
+            resources.ApplyResources(this.DogumTarihi, "DogumTarihi");
             // 
             // Tur1
             // 
-            this.Tur1.Text = "Tür 1";
-            this.Tur1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Tur1.Width = 155;
+            resources.ApplyResources(this.Tur1, "Tur1");
             // 
             // Tur2
             // 
-            this.Tur2.Text = "Tür 2";
-            this.Tur2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Tur2.Width = 92;
+            resources.ApplyResources(this.Tur2, "Tur2");
             // 
             // panel1
             // 
@@ -298,54 +219,22 @@
             this.panel1.Controls.Add(this.btnYazarGuncelle);
             this.panel1.Controls.Add(this.txtYazarSoyad);
             this.panel1.Controls.Add(this.lblYazarSoyad);
-            this.panel1.Location = new System.Drawing.Point(498, 172);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(923, 736);
-            this.panel1.TabIndex = 30;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kaydetYazar,
-            this.AcYazar});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.MdiWindowListItem = this.AcYazar;
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1468, 24);
-            this.menuStrip1.TabIndex = 31;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // kaydetYazar
-            // 
-            this.kaydetYazar.Name = "kaydetYazar";
-            this.kaydetYazar.Size = new System.Drawing.Size(55, 20);
-            this.kaydetYazar.Text = "Kaydet";
-            // 
-            // AcYazar
-            // 
-            this.AcYazar.Name = "AcYazar";
-            this.AcYazar.Size = new System.Drawing.Size(33, 20);
-            this.AcYazar.Text = "Aç";
             // 
             // FormYazarlar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1468, 900);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Name = "FormYazarlar";
-            this.Text = "FormYazarlar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormYazarlar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -375,9 +264,6 @@
         private System.Windows.Forms.ColumnHeader DogumTarihi;
         private System.Windows.Forms.ColumnHeader Tur1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem kaydetYazar;
-        private System.Windows.Forms.ToolStripMenuItem AcYazar;
         private System.Windows.Forms.ColumnHeader Tur2;
     }
 }

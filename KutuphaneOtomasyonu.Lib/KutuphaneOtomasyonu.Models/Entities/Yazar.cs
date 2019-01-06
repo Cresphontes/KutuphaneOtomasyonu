@@ -22,7 +22,7 @@ namespace KutuphaneOtomasyonu.Models.Entities
 
 
         public virtual ICollection<Tur> Turler { get; set; } = new HashSet<Tur>();
-        public virtual List<Kitap> YazarKitaplar { get; set; }
+        public virtual ICollection<Kitap> Kitaplar { get; set; } = new HashSet<Kitap>();
 
 
 

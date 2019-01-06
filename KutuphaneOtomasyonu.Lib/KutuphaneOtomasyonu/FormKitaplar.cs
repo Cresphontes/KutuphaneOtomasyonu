@@ -18,9 +18,9 @@ namespace KutuphaneOtomasyonu
         }
 
         int i = 1;
-        
+
         public static List<RadioButton> RadioButtons { get; set; } = new List<RadioButton>();
-       
+
 
         private void btnKitapKaydet_Click(object sender, EventArgs e)
         {
@@ -41,9 +41,10 @@ namespace KutuphaneOtomasyonu
 
             foreach (var item in yazarlar)
             {
-                if((cmbYazar.SelectedItem as Yazar).YazarId == item.YazarId)
+                if ((cmbYazar.SelectedItem as Yazar).YazarId == item.YazarId)
                 {
                     kitap.Yazar = item;
+                    item.Kitaplar.Add(kitap);
                     break;
                 }
             }
@@ -57,11 +58,8 @@ namespace KutuphaneOtomasyonu
                 }
             }
 
-
-            db.Insert(kitap);
-            yazar.YazarKitaplar.Add(kitap);
-
             db.Update();
+            dbYazar.Update();
 
             KitaplariGetir();
 
@@ -148,10 +146,8 @@ namespace KutuphaneOtomasyonu
         private void lvKitaplar_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-
- 
             if (lvKitaplar.SelectedItems.Count == 0) return;
-        
+
             ListViewItem lvItem = lvKitaplar.SelectedItems[0];
 
             txtKitapAd.Text = lvItem.SubItems[1].Text;
@@ -186,7 +182,7 @@ namespace KutuphaneOtomasyonu
                     break;
             }
 
-            
+
 
 
         }

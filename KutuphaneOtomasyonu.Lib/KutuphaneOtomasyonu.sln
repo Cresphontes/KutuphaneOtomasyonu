@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KutuphaneOtomasyonu.WFA", "KutuphaneOtomasyonu\KutuphaneOtomasyonu.WFA.csproj", "{BB5D02C0-C8F0-434C-9F8D-0C834B1BCA14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KutuphaneOtomasyonu", "KutuphaneOtomasyonu\KutuphaneOtomasyonu.csproj", "{BB5D02C0-C8F0-434C-9F8D-0C834B1BCA14}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KutuphaneOtomasyonu.DAL", "KutuphaneOtomasyonu.DAL\KutuphaneOtomasyonu.DAL.csproj", "{4C65946D-38F7-4376-B439-60CC65B7F686}"
 EndProject

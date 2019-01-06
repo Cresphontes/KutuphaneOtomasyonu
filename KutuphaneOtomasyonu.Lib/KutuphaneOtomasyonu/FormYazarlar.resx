@@ -117,7 +117,694 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblYazarSoyad.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblYazarSoyad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt, style=Bold</value>
+  </data>
+  <data name="lblYazarSoyad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>537, 102</value>
+  </data>
+  <data name="lblYazarSoyad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 22</value>
+  </data>
+  <data name="lblYazarSoyad.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="lblYazarSoyad.Text" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="&gt;&gt;lblYazarSoyad.Name" xml:space="preserve">
+    <value>lblYazarSoyad</value>
+  </data>
+  <data name="&gt;&gt;lblYazarSoyad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblYazarSoyad.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblYazarSoyad.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtYazarSoyad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>490, 127</value>
+  </data>
+  <data name="txtYazarSoyad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 20</value>
+  </data>
+  <data name="txtYazarSoyad.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;txtYazarSoyad.Name" xml:space="preserve">
+    <value>txtYazarSoyad</value>
+  </data>
+  <data name="&gt;&gt;txtYazarSoyad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtYazarSoyad.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtYazarSoyad.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblYazar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblYazar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 20pt, style=Bold</value>
+  </data>
+  <data name="lblYazar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 19</value>
+  </data>
+  <data name="lblYazar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 35</value>
+  </data>
+  <data name="lblYazar.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lblYazar.Text" xml:space="preserve">
+    <value>Yazar Kayıt</value>
+  </data>
+  <data name="&gt;&gt;lblYazar.Name" xml:space="preserve">
+    <value>lblYazar</value>
+  </data>
+  <data name="&gt;&gt;lblYazar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblYazar.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblYazar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnYazarGuncelle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 11.25pt</value>
+  </data>
+  <data name="btnYazarGuncelle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>490, 355</value>
+  </data>
+  <data name="btnYazarGuncelle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 43</value>
+  </data>
+  <data name="btnYazarGuncelle.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="btnYazarGuncelle.Text" xml:space="preserve">
+    <value>Güncelle</value>
+  </data>
+  <data name="&gt;&gt;btnYazarGuncelle.Name" xml:space="preserve">
+    <value>btnYazarGuncelle</value>
+  </data>
+  <data name="&gt;&gt;btnYazarGuncelle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnYazarGuncelle.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnYazarGuncelle.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;Sanat.Name" xml:space="preserve">
+    <value>Sanat</value>
+  </data>
+  <data name="&gt;&gt;Sanat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sanat.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Sanat.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Felsefe.Name" xml:space="preserve">
+    <value>Felsefe</value>
+  </data>
+  <data name="&gt;&gt;Felsefe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Felsefe.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Felsefe.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Psikoloji.Name" xml:space="preserve">
+    <value>Psikoloji</value>
+  </data>
+  <data name="&gt;&gt;Psikoloji.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Psikoloji.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Psikoloji.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Mizah.Name" xml:space="preserve">
+    <value>Mizah</value>
+  </data>
+  <data name="&gt;&gt;Mizah.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mizah.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Mizah.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Tarih.Name" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="&gt;&gt;Tarih.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tarih.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Tarih.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Edebiyat.Name" xml:space="preserve">
+    <value>Edebiyat</value>
+  </data>
+  <data name="&gt;&gt;Edebiyat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Edebiyat.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Edebiyat.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Bilim.Name" xml:space="preserve">
+    <value>Bilim</value>
+  </data>
+  <data name="&gt;&gt;Bilim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Bilim.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Bilim.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt, style=Bold</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 241</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>741, 86</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Yazar Kitap Türleri</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Sanat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Sanat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>608, 43</value>
+  </data>
+  <data name="Sanat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 26</value>
+  </data>
+  <data name="Sanat.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Sanat.Text" xml:space="preserve">
+    <value>Sanat</value>
+  </data>
+  <data name="&gt;&gt;Sanat.Name" xml:space="preserve">
+    <value>Sanat</value>
+  </data>
+  <data name="&gt;&gt;Sanat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sanat.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Sanat.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Felsefe.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Felsefe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>521, 43</value>
+  </data>
+  <data name="Felsefe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 26</value>
+  </data>
+  <data name="Felsefe.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Felsefe.Text" xml:space="preserve">
+    <value>Felsefe</value>
+  </data>
+  <data name="&gt;&gt;Felsefe.Name" xml:space="preserve">
+    <value>Felsefe</value>
+  </data>
+  <data name="&gt;&gt;Felsefe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Felsefe.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Felsefe.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Psikoloji.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Psikoloji.Location" type="System.Drawing.Point, System.Drawing">
+    <value>421, 43</value>
+  </data>
+  <data name="Psikoloji.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 26</value>
+  </data>
+  <data name="Psikoloji.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Psikoloji.Text" xml:space="preserve">
+    <value>Psikoloji</value>
+  </data>
+  <data name="&gt;&gt;Psikoloji.Name" xml:space="preserve">
+    <value>Psikoloji</value>
+  </data>
+  <data name="&gt;&gt;Psikoloji.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Psikoloji.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Psikoloji.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Mizah.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Mizah.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 43</value>
+  </data>
+  <data name="Mizah.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 26</value>
+  </data>
+  <data name="Mizah.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Mizah.Text" xml:space="preserve">
+    <value>Mizah</value>
+  </data>
+  <data name="&gt;&gt;Mizah.Name" xml:space="preserve">
+    <value>Mizah</value>
+  </data>
+  <data name="&gt;&gt;Mizah.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mizah.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Mizah.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Tarih.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Tarih.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 43</value>
+  </data>
+  <data name="Tarih.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 26</value>
+  </data>
+  <data name="Tarih.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Tarih.Text" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="&gt;&gt;Tarih.Name" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="&gt;&gt;Tarih.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tarih.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Tarih.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Edebiyat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Edebiyat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 43</value>
+  </data>
+  <data name="Edebiyat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 26</value>
+  </data>
+  <data name="Edebiyat.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Edebiyat.Text" xml:space="preserve">
+    <value>Edebiyat</value>
+  </data>
+  <data name="&gt;&gt;Edebiyat.Name" xml:space="preserve">
+    <value>Edebiyat</value>
+  </data>
+  <data name="&gt;&gt;Edebiyat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Edebiyat.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Edebiyat.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Bilim.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Bilim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 43</value>
+  </data>
+  <data name="Bilim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 26</value>
+  </data>
+  <data name="Bilim.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Bilim.Text" xml:space="preserve">
+    <value>Bilim</value>
+  </data>
+  <data name="&gt;&gt;Bilim.Name" xml:space="preserve">
+    <value>Bilim</value>
+  </data>
+  <data name="&gt;&gt;Bilim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Bilim.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Bilim.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnYazarKaydet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 11.25pt</value>
+  </data>
+  <data name="btnYazarKaydet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 355</value>
+  </data>
+  <data name="btnYazarKaydet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 43</value>
+  </data>
+  <data name="btnYazarKaydet.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="btnYazarKaydet.Text" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="&gt;&gt;btnYazarKaydet.Name" xml:space="preserve">
+    <value>btnYazarKaydet</value>
+  </data>
+  <data name="&gt;&gt;btnYazarKaydet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnYazarKaydet.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnYazarKaydet.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dtYazarDogumTarihi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 189</value>
+  </data>
+  <data name="dtYazarDogumTarihi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="dtYazarDogumTarihi.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;dtYazarDogumTarihi.Name" xml:space="preserve">
+    <value>dtYazarDogumTarihi</value>
+  </data>
+  <data name="&gt;&gt;dtYazarDogumTarihi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtYazarDogumTarihi.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;dtYazarDogumTarihi.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblYazarAd.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblYazarAd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt, style=Bold</value>
+  </data>
+  <data name="lblYazarAd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 102</value>
+  </data>
+  <data name="lblYazarAd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 22</value>
+  </data>
+  <data name="lblYazarAd.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblYazarAd.Text" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="&gt;&gt;lblYazarAd.Name" xml:space="preserve">
+    <value>lblYazarAd</value>
+  </data>
+  <data name="&gt;&gt;lblYazarAd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblYazarAd.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblYazarAd.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblYazarDogumTarihi.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblYazarDogumTarihi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt, style=Bold</value>
+  </data>
+  <data name="lblYazarDogumTarihi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 164</value>
+  </data>
+  <data name="lblYazarDogumTarihi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 22</value>
+  </data>
+  <data name="lblYazarDogumTarihi.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="lblYazarDogumTarihi.Text" xml:space="preserve">
+    <value>Doğum Tarihi</value>
+  </data>
+  <data name="&gt;&gt;lblYazarDogumTarihi.Name" xml:space="preserve">
+    <value>lblYazarDogumTarihi</value>
+  </data>
+  <data name="&gt;&gt;lblYazarDogumTarihi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblYazarDogumTarihi.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblYazarDogumTarihi.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtYazarAd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 127</value>
+  </data>
+  <data name="txtYazarAd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 20</value>
+  </data>
+  <data name="txtYazarAd.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtYazarAd.Name" xml:space="preserve">
+    <value>txtYazarAd</value>
+  </data>
+  <data name="&gt;&gt;txtYazarAd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtYazarAd.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtYazarAd.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="Ad.Text" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="Ad.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="Soyad.Text" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="Soyad.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="Soyad.Width" type="System.Int32, mscorlib">
+    <value>146</value>
+  </data>
+  <data name="DogumTarihi.Text" xml:space="preserve">
+    <value>Doğum Tarihi</value>
+  </data>
+  <data name="DogumTarihi.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="DogumTarihi.Width" type="System.Int32, mscorlib">
+    <value>201</value>
+  </data>
+  <data name="Tur1.Text" xml:space="preserve">
+    <value>Tür 1</value>
+  </data>
+  <data name="Tur1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="Tur1.Width" type="System.Int32, mscorlib">
+    <value>155</value>
+  </data>
+  <data name="Tur2.Text" xml:space="preserve">
+    <value>Tür 2</value>
+  </data>
+  <data name="Tur2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="Tur2.Width" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="lvYazarlar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 433</value>
+  </data>
+  <data name="lvYazarlar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>785, 286</value>
+  </data>
+  <data name="lvYazarlar.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;lvYazarlar.Name" xml:space="preserve">
+    <value>lvYazarlar</value>
+  </data>
+  <data name="&gt;&gt;lvYazarlar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvYazarlar.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lvYazarlar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>498, 172</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>923, 736</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1468, 900</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>On</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FormYazarlar</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Ad.Name" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="&gt;&gt;Ad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Soyad.Name" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="&gt;&gt;Soyad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DogumTarihi.Name" xml:space="preserve">
+    <value>DogumTarihi</value>
+  </data>
+  <data name="&gt;&gt;DogumTarihi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tur1.Name" xml:space="preserve">
+    <value>Tur1</value>
+  </data>
+  <data name="&gt;&gt;Tur1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tur2.Name" xml:space="preserve">
+    <value>Tur2</value>
+  </data>
+  <data name="&gt;&gt;Tur2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormYazarlar</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

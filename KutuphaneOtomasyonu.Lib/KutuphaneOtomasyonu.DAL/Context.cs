@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 
 namespace KutuphaneOtomasyonu.DAL
 {
-    public class Context:DbContext
+    public class Context : DbContext
     {
-        public Context():base("name=MyCon")
+        public Context() : base("name=MyCon")
         {
 
         }
 
-        public DbSet<Kitap> Kitaplar { get; set; } 
+        public DbSet<Kitap> Kitaplar { get; set; }
         public DbSet<Yazar> Yazarlar { get; set; }
         public DbSet<Tur> Turler { get; set; }
         public DbSet<Uye> Uyeler { get; set; }
@@ -35,7 +35,16 @@ namespace KutuphaneOtomasyonu.DAL
                     cs.MapRightKey("TurId");
                     cs.ToTable("Yazar_Turler");
                 });
+
+            //modelBuilder.Entity<Kitap>()
+            //    .HasRequired<Yazar>(s => s.Yazar)
+            //    .WithMany(g => g.Kitaplar)
+            //    .HasForeignKey<int>(s => s.YazarId);
+
+
+
         }
+
 
 
     }
